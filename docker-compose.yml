@@ -1,0 +1,12 @@
+# v2 syntax
+version: '2'
+
+services:
+  # PHP (with Caddy)
+  app:
+    image: ambientum/php:7.1-caddy
+    container_name: conta-app
+    volumes:
+      - .:/var/www/app
+    ports:
+      - "80:8080"
