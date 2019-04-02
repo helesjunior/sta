@@ -21,11 +21,12 @@ Route::group([
     'namespace' => 'Api',
 ], function () {
     //busca empenhos via ajax
-    Route::get('/empenho', 'EmpenhoController@index');
-    Route::get('/empenhodetalhado', 'EmpenhodetalhadoController@index');
-    Route::get('/credor', 'CredorController@index');
-    Route::get('/unidade', 'UnidadeController@index');
-    Route::get('/planointerno', 'PlanointernoController@index');
+    Route::get('/ler/empenho', 'EmpenhoController@ler');
+    Route::get('/empenho/{dado}', 'EmpenhoController@buscaEmpenhoPorNumero');
+    Route::get('/ler/empenhodetalhado', 'EmpenhodetalhadoController@ler');
+    Route::get('/ler/credor', 'CredorController@ler');
+    Route::get('/ler/unidade', 'UnidadeController@ler');
+    Route::get('/ler/planointerno', 'PlanointernoController@ler');
     Route::get('/empenho/{id}', 'EmpenhoController@show');
 });
 

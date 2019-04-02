@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 
 class UnidadeController extends Controller
 {
-    public function index()
+    public function ler()
     {
         $path = config('app.path_pendentes');
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\Empenhodetalhado;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
@@ -10,7 +11,7 @@ use App\Models\Empenho;
 
 class EmpenhoController extends Controller
 {
-    public function index()
+    public function ler()
     {
         $path = config('app.path_pendentes');
 
@@ -183,4 +184,63 @@ class EmpenhoController extends Controller
         }
         return $empenho;
     }
+
+    public function buscaEmpenhoPorNumero($dado){
+
+        $ug = substr($dado,0,6);
+        $gestao = substr($dado,6,5);
+        $numempenho = strtoupper(substr($dado,11,12));
+        $retorno = new \stdClass();
+
+
+
+        $empenho = Empenho::where('ug',$ug)
+            ->where('gestao',$gestao)
+            ->where('numero',$numempenho)
+            ->first();
+
+        if(count($empenho)){
+
+            $retorno->ug = $empenho->ug;
+            $retorno->gestao = $empenho->gestao;
+            $retorno->numero = $empenho->numero;
+            $retorno->emissao = $empenho->emissao;
+            $retorno->tipofavorecido = $empenho->tipofavorecido;
+            $retorno->favorecido = $empenho->favorecido;
+            $retorno->observacao = $empenho->observacao;
+            $retorno->fonte = $empenho->fonte;
+            $retorno->naturezadespesa = $empenho->naturezadespesa;
+            $retorno->planointerno = $empenho->planointerno;
+
+            $empenhodetalhado = Empenhodetalhado::where('ug',$empenho->ug)
+                ->where('gestao', $empenho->gestao)
+                ->where('numeroli', $empenho->num_lista)
+                ->orderBy('numitem')
+                ->get();
+
+            if(count($empenhodetalhado)){
+
+                $empdetalhado = [];
+
+                foreach($empenhodetalhado as $empd){
+
+                    $empdetalhado[$empd->numitem]['subitem']  = $empd->subitem;
+                    $empdetalhado[$empd->numitem]['quantidade'] = $empd->quantidade;
+                    $empdetalhado[$empd->numitem]['descricao'] = $empd->descricao;
+                    $empdetalhado[$empd->numitem]['valorunitario'] = $empd->valorunitario;
+                    $empdetalhado[$empd->numitem]['valortotal'] = $empd->valortotal;
+
+                }
+
+                $retorno->itens = $empdetalhado;
+
+            }
+        }
+
+        return json_encode($retorno);
+
+    }
+
+
+
 }
