@@ -192,8 +192,6 @@ class EmpenhoController extends Controller
         $numempenho = strtoupper(substr($dado,11,12));
         $retorno = new \stdClass();
 
-
-
         $empenho = Empenho::where('ug',$ug)
             ->where('gestao',$gestao)
             ->where('numero',$numempenho)
