@@ -28,6 +28,7 @@ Route::group([
     Route::get('/ler/unidade', 'UnidadeController@ler');
     Route::get('/ler/planointerno', 'PlanointernoController@ler');
     Route::get('/empenho/{id}', 'EmpenhoController@show');
+    Route::get('/ler/ordembancaria', 'OrdembancariaController@ler');
 });
 
 

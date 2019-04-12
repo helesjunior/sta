@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Empenhodetalhado;
+use App\Models\Obxne;
+use App\Models\Ordembancaria;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
@@ -221,7 +223,6 @@ class EmpenhoController extends Controller
                 $empdetalhado = [];
 
                 foreach($empenhodetalhado as $empd){
-
                     $empdetalhado[$empd->numitem]['subitem']  = $empd->subitem;
                     $empdetalhado[$empd->numitem]['quantidade'] = $empd->quantidade;
                     $empdetalhado[$empd->numitem]['descricao'] = $empd->descricao;
@@ -229,10 +230,33 @@ class EmpenhoController extends Controller
                     $empdetalhado[$empd->numitem]['valortotal'] = $empd->valortotal;
 
                 }
-
                 $retorno->itens = $empdetalhado;
+            }
+
+            $obnxe = Obxne::where('numeroempenho',$empenho->ug.$empenho->gestao.$empenho->numero)
+                ->orderBy('ordembancaria_id')
+                ->get();
+
+            if(count($obnxe)) {
+                $ordembancaria = [];
+                $i = 0;
+                foreach($obnxe as $on){
+                    $ob = Ordembancaria::where('id',$on->ordembancaria_id)
+                        ->first();
+                    $ordembancaria[$i]['numero'] =  $ob->numero;
+                    $ordembancaria[$i]['emissao'] =  $ob->emissao;
+                    $ordembancaria[$i]['valor'] =  $ob->valor;
+                    $ordembancaria[$i]['documentoorigem'] =  $ob->documentoorigem;
+                    $ordembancaria[$i]['favorecido'] =  $ob->favorecido;
+
+                    $i++;
+                }
+
+                $retorno->ordensbancarias = $ordembancaria;
 
             }
+
+
         }
 
         return json_encode($retorno);
