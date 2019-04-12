@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5f7bbf1-8681-41d7-955f-e279d69fe13c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/EmpenhoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/EmpenhoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_12_115712_create_ordembancaria_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_12_115712_create_ordembancaria_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-    </list>
+    <list default="true" id="f5f7bbf1-8681-41d7-955f-e279d69fe13c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/EmpenhoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="239" column="31" lean-forward="true" selection-start-line="239" selection-start-column="31" selection-end-line="239" selection-end-column="31" />
+            <state relative-caret-position="485">
+              <caret line="249" column="72" lean-forward="true" selection-start-line="249" selection-start-column="72" selection-end-line="249" selection-end-column="72" />
               <folding>
                 <element signature="e#44#76#0#PHP" expanded="true" />
               </folding>
@@ -306,12 +302,12 @@
       <workItem from="1554210033851" duration="60000" />
       <workItem from="1554210228985" duration="1519000" />
       <workItem from="1554215207148" duration="6984000" />
-      <workItem from="1555069877763" duration="23415000" />
+      <workItem from="1555069877763" duration="23504000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69341000" />
+    <option name="totallyTimeSpent" value="69430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -557,8 +553,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/EmpenhoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="239" column="31" lean-forward="true" selection-start-line="239" selection-start-column="31" selection-end-line="239" selection-end-column="31" />
+        <state relative-caret-position="485">
+          <caret line="249" column="72" lean-forward="true" selection-start-line="249" selection-start-column="72" selection-end-line="249" selection-end-column="72" />
           <folding>
             <element signature="e#44#76#0#PHP" expanded="true" />
           </folding>
