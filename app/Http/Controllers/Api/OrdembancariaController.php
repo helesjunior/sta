@@ -225,6 +225,10 @@ class OrdembancariaController extends Controller
                     }
                 }
 
+                if ($campo == 'IT-TX-OBSERVACAO') {
+                    $ordembancaria[$i]['observacao'] = trim(strtoupper(utf8_encode($valor)));
+                }
+
                 if ($campo == 'IT-IN-CANCELAMENTO-OB') {
                     $ordembancaria[$i]['cancelamentoob'] = $valor;
                 }
@@ -286,6 +290,75 @@ class OrdembancariaController extends Controller
             unlink($name.".TXT.gz");
         }
         return $ordembancaria;
+    }
+
+    public function buscaOrdembancariaPorCnpj($dado){
+
+        $ordembancaria = Ordembancaria::where('favorecido',trim($dado))
+            ->orderBy('emissao')
+            ->get();
+
+        if(count($ordembancaria)){
+
+            $i = 1;
+            foreach ($ordembancaria as $ob){
+                $retorno[$i]['ug'] = $ob->ug;
+                $retorno[$i]['gestao'] = $ob->gestao;
+                $retorno[$i]['numero'] = $ob->numero;
+                $retorno[$i]['emissao'] = $ob->emissao;
+                $retorno[$i]['tipofavorecido'] = $ob->tipofavorecido;
+                $retorno[$i]['favorecido'] = $ob->favorecido;
+                $retorno[$i]['observacao'] = $ob->observacao;
+                $retorno[$i]['tipoob'] = $ob->tipoob;
+                $retorno[$i]['processo'] = $ob->processo;
+                $retorno[$i]['cancelamentoob'] = $ob->cancelamentoob;
+                $retorno[$i]['numeroobcancelamento'] = $ob->numeroobcancelamento;
+                $retorno[$i]['valor'] = number_format($ob->valor,2,',','.');
+                $retorno[$i]['documentoorigem'] = $ob->documentoorigem;
+
+                $i++;
+            }
+
+            }
+
+        return json_encode($retorno);
+
+    }
+
+    public function buscaOrdembancariaPorAnoUg($ano,$ug){
+
+        $retorno = [];
+
+        $ordembancaria = Ordembancaria::where('numero', 'LIKE', trim($ano).'OB%')
+            ->where('ug',$ug)
+            ->orderBy('emissao')
+            ->get();
+
+        if(count($ordembancaria)){
+
+            $i = 1;
+            foreach ($ordembancaria as $ob){
+                $retorno[$i]['ug'] = $ob->ug;
+                $retorno[$i]['gestao'] = $ob->gestao;
+                $retorno[$i]['numero'] = $ob->numero;
+                $retorno[$i]['emissao'] = $ob->emissao;
+                $retorno[$i]['tipofavorecido'] = $ob->tipofavorecido;
+                $retorno[$i]['favorecido'] = $ob->favorecido;
+                $retorno[$i]['observacao'] = $ob->observacao;
+                $retorno[$i]['tipoob'] = $ob->tipoob;
+                $retorno[$i]['processo'] = $ob->processo;
+                $retorno[$i]['cancelamentoob'] = $ob->cancelamentoob;
+                $retorno[$i]['numeroobcancelamento'] = $ob->numeroobcancelamento;
+                $retorno[$i]['valor'] = $ob->valor;
+                $retorno[$i]['documentoorigem'] = $ob->documentoorigem;
+
+                $i++;
+            }
+
+        }
+
+        return json_encode($retorno);
+
     }
 
 

@@ -23,12 +23,14 @@ Route::group([
     //busca empenhos via ajax
     Route::get('/ler/empenho', 'EmpenhoController@ler');
     Route::get('/empenho/{dado}', 'EmpenhoController@buscaEmpenhoPorNumero');
+    Route::get('/ordembancaria/favorecido/{dado}', 'OrdembancariaController@buscaOrdembancariaPorCnpj');
+    Route::get('/ordembancaria/ano/{ano}/ug/{ug}', 'OrdembancariaController@buscaOrdembancariaPorAnoUg');
     Route::get('/ler/empenhodetalhado', 'EmpenhodetalhadoController@ler');
     Route::get('/ler/credor', 'CredorController@ler');
     Route::get('/ler/unidade', 'UnidadeController@ler');
     Route::get('/ler/planointerno', 'PlanointernoController@ler');
     Route::get('/empenho/{id}', 'EmpenhoController@show');
-    Route::get('/ler/ordembancaria', 'OrdembancariaController@ler');
+    Route::get('/ler/ordembancaria/', 'OrdembancariaController@ler');
 });
 
 
