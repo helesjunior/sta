@@ -8,7 +8,13 @@ class Sfcronbaixapatrimonial extends Model
 {
     protected $table = 'sfcronbaixapatrimonial';
 
-    public function sfcronbaixapatrimonialable(){
+    public function sfcronbaixapatrimonialable()
+    {
         return $this->morphTo();
+    }
+
+    public function parcela()
+    {
+        return $this->hasMany(Sfparcela::class);
     }
 }

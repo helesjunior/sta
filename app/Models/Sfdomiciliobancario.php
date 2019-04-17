@@ -7,4 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Sfdomiciliobancario extends Model
 {
     protected $table = 'sfdomiciliobancario';
+
+    public function sfdomiciliobancarioable()
+    {
+        $this->morphTo();
+    }
+
 }
