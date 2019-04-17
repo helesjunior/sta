@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Sfitemrecolhimento extends Model
 {
     public function sfitemrecolhimentoable(){
-        $this->morphTo();
+        return $this->morphTo();
     }
 }
