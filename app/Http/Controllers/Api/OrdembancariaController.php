@@ -26,16 +26,16 @@ class OrdembancariaController extends Controller
 
         $nomearquivo = [];
 
-        foreach ($arquivos as $arq){
-            $arq1 = explode('.',$arq);
-            if($arq1[1]== 'TXT'){
+        foreach ($arquivos as $arq) {
+            $arq1 = explode('.', $arq);
+            if ($arq1[1] == 'TXT') {
                 $nomearquivo[] = $arq1[0];
             }
         }
 
-        if(count($nomearquivo)){
-            foreach ($nomearquivo as $nome){
-                if(substr($nome,0,2) == 'ob'){
+        if (count($nomearquivo)) {
+            foreach ($nomearquivo as $nome) {
+                if (substr($nome, 0, 2) == 'ob') {
                     $ordembancaria = $this->lerArquivo($nome);
 
                     foreach ($ordembancaria as $e) {
@@ -91,11 +91,11 @@ class OrdembancariaController extends Controller
 //                            }
                             $novo_ordembancaria->save();
 
-                            if(isset($e['empenhos'])){
-                                foreach ($e['empenhos'] as $emp){
+                            if (isset($e['empenhos'])) {
+                                foreach ($e['empenhos'] as $emp) {
                                     $obxne = new Obxne;
                                     $obxne->ordembancaria_id = $novo_ordembancaria->id;
-                                    $obxne->numeroempenho = $novo_ordembancaria->ug.$novo_ordembancaria->gestao.$emp;
+                                    $obxne->numeroempenho = $novo_ordembancaria->ug . $novo_ordembancaria->gestao . $emp;
                                     $obxne->save();
                                 }
                             }
@@ -107,7 +107,7 @@ class OrdembancariaController extends Controller
 
             $ok = 'Ordens bancarias lidos.';
 
-        }else{
+        } else {
             $ok = 'Não Há arquivos para leitura.';
         }
 
@@ -160,8 +160,8 @@ class OrdembancariaController extends Controller
         $NUMCOLS = $i;
         gzclose($myfile);
 
-        if(copy($name.".REF.gz",$namedestino.".LIDO.REF.gz")){
-            unlink($name.".REF.gz");
+        if (copy($name . ".REF.gz", $namedestino . ".LIDO.REF.gz")) {
+            unlink($name . ".REF.gz");
         }
 
         $myfile = gzopen($name . ".TXT.gz", "r") or die("Unable to open file!");
@@ -188,9 +188,9 @@ class OrdembancariaController extends Controller
                     $ordembancaria[$i]['tipofavorecido'] = $valor;
                 }
                 if ($campo == 'IT-CO-FAVORECIDO') {
-                    if($ordembancaria[$i]['tipofavorecido'] == 4){
-                        $ordembancaria[$i]['favorecido'] = trim(substr($valor,0,6));
-                    }else{
+                    if ($ordembancaria[$i]['tipofavorecido'] == 4) {
+                        $ordembancaria[$i]['favorecido'] = trim(substr($valor, 0, 6));
+                    } else {
                         $ordembancaria[$i]['favorecido'] = trim($valor);
                     }
                 }
@@ -215,11 +215,11 @@ class OrdembancariaController extends Controller
                     $ordembancaria[$i]['tipoob'] = $valor;
                 }
 
-                for($n=1; $n <=20; $n++){
-                    if ($campo == strval ('IT-TX-OBSERVACAO-DOCUMENTO('.$n.')')) {
-                        if(isset($ordembancaria[$i]['observacao'])){
+                for ($n = 1; $n <= 20; $n++) {
+                    if ($campo == strval('IT-TX-OBSERVACAO-DOCUMENTO(' . $n . ')')) {
+                        if (isset($ordembancaria[$i]['observacao'])) {
                             $ordembancaria[$i]['observacao'] .= trim(strtoupper(utf8_encode($valor)));
-                        }else{
+                        } else {
                             $ordembancaria[$i]['observacao'] = trim(strtoupper(utf8_encode($valor)));
                         }
                     }
@@ -263,45 +263,46 @@ class OrdembancariaController extends Controller
 //
 //                }
 
-                for($n=1; $n <=100; $n++){
-                    if ($campo === 'IT-CO-INSCRICAO01('.$n.')') {
-                        if(strstr($valor, 'NE')){
-                            $ordembancaria[$i]['empenhos'][$n] = substr(strtoupper(utf8_encode($valor)),0,12);
+                for ($n = 1; $n <= 100; $n++) {
+                    if ($campo === 'IT-CO-INSCRICAO01(' . $n . ')') {
+                        if (strstr($valor, 'NE')) {
+                            $ordembancaria[$i]['empenhos'][$n] = substr(strtoupper(utf8_encode($valor)), 0, 12);
                         }
 
                     }
 
-                    if ($campo === 'IT-CO-INSCRICAO1('.$n.')') {
-                        if(strstr($valor, 'NE')){
-                            $ordembancaria[$i]['empenhos'][$n] = substr(strtoupper(utf8_encode($valor)),0,12);
+                    if ($campo === 'IT-CO-INSCRICAO1(' . $n . ')') {
+                        if (strstr($valor, 'NE')) {
+                            $ordembancaria[$i]['empenhos'][$n] = substr(strtoupper(utf8_encode($valor)), 0, 12);
                         }
                     }
                 }
             }
 
-            if(isset($ordembancaria[$i]['empenhos'])){
+            if (isset($ordembancaria[$i]['empenhos'])) {
                 $ordembancaria[$i]['empenhos'] = array_unique($ordembancaria[$i]['empenhos']);
             }
             $i++;
         }
         gzclose($myfile);
 
-        if(copy($name.".TXT.gz",$namedestino.".LIDO.TXT.gz")){
-            unlink($name.".TXT.gz");
+        if (copy($name . ".TXT.gz", $namedestino . ".LIDO.TXT.gz")) {
+            unlink($name . ".TXT.gz");
         }
         return $ordembancaria;
     }
 
-    public function buscaOrdembancariaPorCnpj($dado){
+    public function buscaOrdembancariaPorCnpj($dado)
+    {
 
-        $ordembancaria = Ordembancaria::where('favorecido',trim($dado))
+        $ordembancaria = Ordembancaria::where('favorecido', trim($dado))
             ->orderBy('emissao')
             ->get();
 
-        if(count($ordembancaria)){
+        if (count($ordembancaria)) {
 
             $i = 1;
-            foreach ($ordembancaria as $ob){
+            foreach ($ordembancaria as $ob) {
                 $retorno[$i]['ug'] = $ob->ug;
                 $retorno[$i]['gestao'] = $ob->gestao;
                 $retorno[$i]['numero'] = $ob->numero;
@@ -313,31 +314,32 @@ class OrdembancariaController extends Controller
                 $retorno[$i]['processo'] = $ob->processo;
                 $retorno[$i]['cancelamentoob'] = $ob->cancelamentoob;
                 $retorno[$i]['numeroobcancelamento'] = $ob->numeroobcancelamento;
-                $retorno[$i]['valor'] = number_format($ob->valor,2,',','.');
+                $retorno[$i]['valor'] = number_format($ob->valor, 2, ',', '.');
                 $retorno[$i]['documentoorigem'] = $ob->documentoorigem;
 
                 $i++;
             }
 
-            }
+        }
 
         return json_encode($retorno);
 
     }
 
-    public function buscaOrdembancariaPorAnoUg($ano,$ug){
+    public function buscaOrdembancariaPorAnoUg($ano, $ug)
+    {
 
         $retorno = [];
 
-        $ordembancaria = Ordembancaria::where('numero', 'LIKE', trim($ano).'OB%')
-            ->where('ug',$ug)
+        $ordembancaria = Ordembancaria::where('numero', 'LIKE', trim($ano) . 'OB%')
+            ->where('ug', $ug)
             ->orderBy('emissao')
             ->get();
 
-        if(count($ordembancaria)){
+        if (count($ordembancaria)) {
 
             $i = 1;
-            foreach ($ordembancaria as $ob){
+            foreach ($ordembancaria as $ob) {
                 $retorno[$i]['ug'] = $ob->ug;
                 $retorno[$i]['gestao'] = $ob->gestao;
                 $retorno[$i]['numero'] = $ob->numero;
