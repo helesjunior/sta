@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sfdespesaanularitem extends Model
 {
-    //
+    protected $table = 'sfdespesaanularitem';
 }

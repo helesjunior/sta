@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sfpsoitem extends Model
 {
-    //
+    protected $table = 'sfpsoitem';
 }

@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sfpadrao extends Model
 {
-    //
+    protected $table = 'sfpadrao';
 }

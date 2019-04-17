@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sfpredocgru extends Model
 {
-    //
+    protected $table = 'sfpredocgru';
 }
