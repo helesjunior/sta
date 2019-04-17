@@ -16,8 +16,8 @@ class CreateSfparcelaTable extends Migration
         Schema::create('sfparcela', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('sfcronbaixapatrimonial_id');
-            $table->bigInteger('numparcela')->nullable();
-            $table->date('dtprevista')->nullable();
+            $table->bigInteger('numParcela')->nullable();
+            $table->date('dtPrevista')->nullable();
             $table->decimal('vlr',17,2)->nullable();
             $table->timestamps();
         });

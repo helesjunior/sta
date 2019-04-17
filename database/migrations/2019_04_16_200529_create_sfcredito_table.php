@@ -16,17 +16,17 @@ class CreateSfcreditoTable extends Migration
         Schema::create('sfcredito', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('sfpadrao_id');
-            $table->bigInteger('numseqitem')->nullable();
-            $table->string('codsit')->nullable();
-            $table->boolean('indrliquidado')->nullable();
+            $table->bigInteger('numSeqItem')->nullable();
+            $table->string('CodSit')->nullable();
+            $table->boolean('indrLiquidado')->nullable();
             $table->decimal('vlr',17,2)->nullable();
-            $table->integer('codfontrecur')->nullable();
-            $table->string('codctgogasto')->nullable();
-            $table->string('txtinscra')->nullable();
-            $table->integer('numclassa')->nullable();
-            $table->string('txtinscrb')->nullable();
-            $table->integer('numclassb')->nullable();
-            $table->string('txtinscrc')->nullable();
+            $table->integer('codFontRecur')->nullable();
+            $table->string('codCtgoGasto')->nullable();
+            $table->string('txtInscrA')->nullable();
+            $table->integer('numClassA')->nullable();
+            $table->string('txtInscrB')->nullable();
+            $table->integer('numClassB')->nullable();
+            $table->string('txtInscrC')->nullable();
             $table->timestamps();
         });
 

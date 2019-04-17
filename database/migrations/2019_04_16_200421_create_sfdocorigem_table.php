@@ -16,9 +16,9 @@ class CreateSfdocorigemTable extends Migration
         Schema::create('sfdocorigem', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('sfdadosbasicos_id');
-            $table->string('codidentemit')->nullable();
-            $table->date('dtemis')->nullable();
-            $table->string('numdocorigem')->nullable();
+            $table->string('codIdentEmit')->nullable();
+            $table->date('dtEmis')->nullable();
+            $table->string('numDocOrigem')->nullable();
             $table->decimal('vlr',17,2)->nullable();
             $table->timestamps();
         });

@@ -16,9 +16,9 @@ class CreateSfpredocnsTable extends Migration
         Schema::create('sfpredocns', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('sfpredoc_id');
-            $table->string('codcredordevedor')->nullable();
-            $table->string('codtipobanco')->nullable();
-            $table->string('codinscgen')->nullable();
+            $table->string('codCredorDevedor')->nullable();
+            $table->string('codTipoBanco')->nullable();
+            $table->string('codInscGen')->nullable();
             $table->timestamps();
         });
 

@@ -16,21 +16,22 @@ class CreateSfpredocobTable extends Migration
         Schema::create('sfpredocob', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('sfpredoc_id');
-            $table->string('codcredordevedor')->nullable();
-            $table->string('codnumlista')->nullable();
-            $table->string('txtcit')->nullable();
-            $table->integer('codrecogru')->nullable();
-            $table->integer('codugragru')->nullable();
-            $table->string('numragru')->nullable();
-            $table->integer('codrecdarf')->nullable();
-            $table->integer('numrefdarf')->nullable();
-            $table->integer('codcontrepas')->nullable();
-            $table->string('codevntbacen')->nullable();
-            $table->integer('codfinalidade')->nullable();
-            $table->string('txtctrloriginal')->nullable();
-            $table->decimal('vlrtaxacambio',17,2)->nullable();
-            $table->string('txtprocesso')->nullable();
-            $table->integer('coddevolucaospb')->nullable();
+            $table->string('codTipoOB')->nullable();
+            $table->string('codCredorDevedor')->nullable();
+            $table->string('codNumLista')->nullable();
+            $table->string('txtCit')->nullable();
+            $table->integer('codRecoGru')->nullable();
+            $table->integer('codUgRaGru')->nullable();
+            $table->string('numRaGru')->nullable();
+            $table->integer('codRecDarf')->nullable();
+            $table->integer('numRefDarf')->nullable();
+            $table->integer('codContRepas')->nullable();
+            $table->string('codEvntBacen')->nullable();
+            $table->integer('codFinalidade')->nullable();
+            $table->string('txtCtrlOriginal')->nullable();
+            $table->decimal('vlrTaxaCambio',17,2)->nullable();
+            $table->string('txtProcesso')->nullable();
+            $table->integer('codDevolucaoSPB')->nullable();
             $table->timestamps();
         });
 

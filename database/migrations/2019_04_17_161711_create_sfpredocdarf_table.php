@@ -16,15 +16,15 @@ class CreateSfpredocdarfTable extends Migration
         Schema::create('sfpredocdarf', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('sfpredoc_id');
-            $table->string('codtipodarf')->nullable();
-            $table->string('codrecurso')->nullable();
-            $table->date('dtprdoapuracao')->nullable();
-            $table->string('numref')->nullable();
-            $table->string('txtprocesso')->nullable();
-            $table->decimal('vlrrctabrutaacum',17,2)->nullable();
-            $table->decimal('vlrpercentual',17,2)->nullable();
-            $table->string('numcodbarras')->nullable();
-            $table->integer('vinculacaopgto')->nullable();
+            $table->string('codTipoDARF')->nullable();
+            $table->string('codRecurso')->nullable();
+            $table->date('dtPrdoApuracao')->nullable();
+            $table->string('numRef')->nullable();
+            $table->string('txtProcesso')->nullable();
+            $table->decimal('vlrRctaBrutaAcum',17,2)->nullable();
+            $table->decimal('vlrPercentual',17,2)->nullable();
+            $table->string('numCodBarras')->nullable();
+            $table->integer('vinculacaoPgto')->nullable();
             $table->timestamps();
         });
 

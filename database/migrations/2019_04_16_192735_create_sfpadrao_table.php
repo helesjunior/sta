@@ -15,10 +15,10 @@ class CreateSfpadraoTable extends Migration
     {
         Schema::create('sfpadrao', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('codugemit');
-            $table->integer('anodh')->nullable();
-            $table->char('codtipodh',2)->nullable();
-            $table->integer('numdh')->nullable();
+            $table->integer('codUgEmit');
+            $table->integer('anoDH')->nullable();
+            $table->char('codTipoDH',2)->nullable();
+            $table->integer('numDH')->nullable();
             $table->timestamps();
         });
     }

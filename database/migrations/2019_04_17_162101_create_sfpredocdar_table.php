@@ -16,17 +16,17 @@ class CreateSfpredocdarTable extends Migration
         Schema::create('sfpredocdar', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('sfpredoc_id');
-            $table->string('codrecurso')->nullable();
-            $table->string('mesreferencia')->nullable();
-            $table->string('anoreferencia')->nullable();
-            $table->integer('codugtmdrserv')->nullable();
-            $table->integer('numnf')->nullable();
-            $table->string('txtserienf')->nullable();
-            $table->integer('numsubserienf')->nullable();
-            $table->integer('codmuninf')->nullable();
-            $table->date('dtemisnf')->nullable();
-            $table->decimal('vlrnf',17,2)->nullable();
-            $table->decimal('numaliqnf',17,2)->nullable();
+            $table->string('codRecurso')->nullable();
+            $table->string('mesReferencia')->nullable();
+            $table->string('anoReferencia')->nullable();
+            $table->integer('codUgTmdrServ')->nullable();
+            $table->integer('numNf')->nullable();
+            $table->string('txtSerieNf')->nullable();
+            $table->integer('numSubSerieNf')->nullable();
+            $table->integer('codMuniNf')->nullable();
+            $table->date('dtEmisNf')->nullable();
+            $table->decimal('vlrNf',17,2)->nullable();
+            $table->decimal('numAliqNf',17,2)->nullable();
             $table->timestamps();
         });
 

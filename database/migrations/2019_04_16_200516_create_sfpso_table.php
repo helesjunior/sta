@@ -16,12 +16,12 @@ class CreateSfpsoTable extends Migration
         Schema::create('sfpso', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('sfpadrao_id');
-            $table->bigInteger('numseqitem')->nullable();
-            $table->string('codsit')->nullable();
-            $table->string('txtinscre')->nullable();
-            $table->integer('numclasse')->nullable();
-            $table->string('txtinscrf')->nullable();
-            $table->integer('numclassf')->nullable();
+            $table->bigInteger('numSeqItem')->nullable();
+            $table->string('CodSit')->nullable();
+            $table->string('txtInscrE')->nullable();
+            $table->integer('numClassE')->nullable();
+            $table->string('txtInscrF')->nullable();
+            $table->integer('numClassF')->nullable();
             $table->timestamps();
         });
 

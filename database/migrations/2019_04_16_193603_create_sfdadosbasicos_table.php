@@ -16,17 +16,17 @@ class CreateSfdadosbasicosTable extends Migration
         Schema::create('sfdadosbasicos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('sfpadrao_id');
-            $table->date('dtemis')->nullable();
-            $table->date('dtvenc')->nullable();
-            $table->integer('codugpgto')->nullable();
+            $table->date('dtEmis')->nullable();
+            $table->date('dtVenc')->nullable();
+            $table->integer('codUgPgto')->nullable();
             $table->decimal('vlr',17,2)->nullable();
-            $table->string('txtobser')->nullable();
-            $table->string('txtinfoadic')->nullable();
-            $table->decimal('vlrtaxacambio',17,2)->nullable();
-            $table->string('txtprocesso')->nullable();
-            $table->date('dtateste')->nullable();
-            $table->string('codcredordevedor');
-            $table->date('dtpgtoreceb')->nullable();
+            $table->string('txtObser')->nullable();
+            $table->string('txtInfoAdic')->nullable();
+            $table->decimal('vlrTaxaCambio',17,2)->nullable();
+            $table->string('txtProcesso')->nullable();
+            $table->date('dtAteste')->nullable();
+            $table->string('codCredorDevedor');
+            $table->date('dtPgtoReceb')->nullable();
             $table->timestamps();
         });
 

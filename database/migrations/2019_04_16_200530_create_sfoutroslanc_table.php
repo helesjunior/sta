@@ -16,20 +16,20 @@ class CreateSfoutroslancTable extends Migration
         Schema::create('sfoutroslanc', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('sfpadrao_id');
-            $table->bigInteger('numseqitem')->nullable();
-            $table->string('codsit')->nullable();
-            $table->boolean('indrliquidado')->nullable();
+            $table->bigInteger('numSeqItem')->nullable();
+            $table->string('codSit')->nullable();
+            $table->boolean('indrLiquidado')->nullable();
             $table->decimal('vlr',17,2)->nullable();
-            $table->boolean('indrtemcontrato')->nullable();
-            $table->string('txtinscra')->nullable();
-            $table->integer('numclassa')->nullable();
-            $table->string('txtinscrb')->nullable();
-            $table->integer('numclassb')->nullable();
-            $table->string('txtinscrc')->nullable();
-            $table->integer('numclassc')->nullable();
-            $table->string('txtinscrd')->nullable();
-            $table->integer('numclassd')->nullable();
-            $table->string('tpnormalestorno')->nullable();
+            $table->boolean('indrTemContrato')->nullable();
+            $table->string('txtInscrA')->nullable();
+            $table->integer('numClassA')->nullable();
+            $table->string('txtInscrB')->nullable();
+            $table->integer('numClassB')->nullable();
+            $table->string('txtInscrC')->nullable();
+            $table->integer('numClassC')->nullable();
+            $table->string('txtInscrD')->nullable();
+            $table->integer('numClassD')->nullable();
+            $table->string('tpNormalEstorno')->nullable();
             $table->timestamps();
         });
     }

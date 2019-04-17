@@ -16,17 +16,17 @@ class CreateSfpcoitemTable extends Migration
         Schema::create('sfpcoitem', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('sfpco_id');
-            $table->bigInteger('numseqitem')->nullable();
-            $table->string('numempe')->nullable();
-            $table->integer('codsubitemempe')->nullable();
-            $table->boolean('indrliquidado')->nullable();
+            $table->bigInteger('numSeqItem')->nullable();
+            $table->string('numEmpe')->nullable();
+            $table->integer('codSubItemEmpe')->nullable();
+            $table->boolean('indrLiquidado')->nullable();
             $table->decimal('vlr',17,2)->nullable();
-            $table->string('txtinscra')->nullable();
-            $table->integer('numclassa')->nullable();
-            $table->string('txtinscrb')->nullable();
-            $table->integer('numclassb')->nullable();
-            $table->string('txtinscrc')->nullable();
-            $table->integer('numclassc')->nullable();
+            $table->string('txtInscrA')->nullable();
+            $table->integer('numClassA')->nullable();
+            $table->string('txtInscrB')->nullable();
+            $table->integer('numClassB')->nullable();
+            $table->string('txtInscrC')->nullable();
+            $table->integer('numClassC')->nullable();
             $table->timestamps();
         });
 

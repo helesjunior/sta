@@ -16,9 +16,9 @@ class CreateSftramiteTable extends Migration
         Schema::create('sftramite', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('sfdadosbasicos_id');
-            $table->integer('txtlocal')->nullable();
-            $table->date('dtentrada')->nullable();
-            $table->date('dtsaida')->nullable();
+            $table->integer('txtLocal')->nullable();
+            $table->date('dtEntrada')->nullable();
+            $table->date('DtSaida')->nullable();
             $table->timestamps();
         });
         Schema::table('sftramite', function (Blueprint $table) {

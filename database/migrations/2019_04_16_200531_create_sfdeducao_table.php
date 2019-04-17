@@ -16,20 +16,20 @@ class CreateSfdeducaoTable extends Migration
         Schema::create('sfdeducao', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('sfpadrao_id');
-            $table->bigInteger('numseqitem')->nullable();
-            $table->string('codsit')->nullable();
-            $table->date('dtvenc')->nullable();
-            $table->date('dtpgtoreceb')->nullable();
-            $table->integer('codugpgto')->nullable();
+            $table->bigInteger('numSeqItem')->nullable();
+            $table->string('codSit')->nullable();
+            $table->date('dtVenc')->nullable();
+            $table->date('dtPgtoReceb')->nullable();
+            $table->integer('codUgPgto')->nullable();
             $table->decimal('vlr',17,2)->nullable();
-            $table->string('txtinscra')->nullable();
-            $table->integer('numclassa')->nullable();
-            $table->string('txtinscrb')->nullable();
-            $table->integer('numclassb')->nullable();
-            $table->string('txtinscrc')->nullable();
-            $table->integer('numclassc')->nullable();
-            $table->string('txtinscrd')->nullable();
-            $table->integer('numclassd')->nullable();
+            $table->string('txtInscrA')->nullable();
+            $table->integer('numClassA')->nullable();
+            $table->string('txtInscrB')->nullable();
+            $table->integer('numClassB')->nullable();
+            $table->string('txtInscrC')->nullable();
+            $table->integer('numClassC')->nullable();
+            $table->string('txtInscrD')->nullable();
+            $table->integer('numClassD')->nullable();
             $table->timestamps();
         });
 

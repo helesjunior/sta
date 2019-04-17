@@ -16,14 +16,14 @@ class CreateSfitemrecolhimentoTable extends Migration
         Schema::create('sfitemrecolhimento', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->morphs('sfitemrecolhimentoable');
-            $table->bigInteger('numseqitem')->nullable();
-            $table->string('codrecolhedor')->nullable();
+            $table->bigInteger('numSeqItem')->nullable();
+            $table->string('codRecolhedor')->nullable();
             $table->decimal('vlr',17,2)->nullable();
-            $table->decimal('vlrbasecalculo',17,2)->nullable();
-            $table->decimal('vlrmulta',17,2)->nullable();
-            $table->decimal('vlrjuros',17,2)->nullable();
-            $table->decimal('vlroutrasent',17,2)->nullable();
-            $table->decimal('vlratmmultajuros',17,2)->nullable();
+            $table->decimal('vlrBaseCalculo',17,2)->nullable();
+            $table->decimal('vlrMulta',17,2)->nullable();
+            $table->decimal('vlrJuros',17,2)->nullable();
+            $table->decimal('vlrOutrasEnt',17,2)->nullable();
+            $table->decimal('vlrAtmMultaJuros',17,2)->nullable();
         });
 
     }

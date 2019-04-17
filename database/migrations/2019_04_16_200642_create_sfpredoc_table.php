@@ -16,7 +16,7 @@ class CreateSfpredocTable extends Migration
         Schema::create('sfpredoc', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->morphs('sfpredocable');
-            $table->string('txtobser')->nullable();
+            $table->string('txtObser')->nullable();
         });
 
     }

@@ -16,8 +16,8 @@ class CreateSfdocrelacionadoTable extends Migration
         Schema::create('sfdocrelacionado', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('sfdadosbasicos_id');
-            $table->integer('codugemit')->nullable();
-            $table->string('numdocrelacionado')->nullable();
+            $table->integer('codUgEmit')->nullable();
+            $table->string('numDocRelacionado')->nullable();
             $table->timestamps();
         });
         Schema::table('sfdocrelacionado', function (Blueprint $table) {

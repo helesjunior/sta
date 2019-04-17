@@ -16,14 +16,14 @@ class CreateSfpcoTable extends Migration
         Schema::create('sfpco', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('sfpadrao_id');
-            $table->bigInteger('numseqitem')->nullable();
-            $table->string('codsit')->nullable();
-            $table->integer('codugempe')->nullable();
-            $table->boolean('indrtemcontrato')->nullable();
-            $table->string('txtinscrd')->nullable();
-            $table->integer('numclassd')->nullable();
-            $table->string('txttnscre')->nullable();
-            $table->integer('numclasse')->nullable();
+            $table->bigInteger('numSeqItem')->nullable();
+            $table->string('codSit')->nullable();
+            $table->integer('codUgEmpe')->nullable();
+            $table->boolean('indrTemContrato')->nullable();
+            $table->string('txtInscrD')->nullable();
+            $table->integer('numClassD')->nullable();
+            $table->string('txtInscrE')->nullable();
+            $table->integer('numClassE')->nullable();
             $table->timestamps();
         });
 
