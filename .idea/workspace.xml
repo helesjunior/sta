@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5f7bbf1-8681-41d7-955f-e279d69fe13c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_04_16_192735_create_sfpadrao_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_04_16_200421_create_sfdocorigem_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_04_16_200422_create_sfdocrelacionado_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_04_16_200423_create_sftramite_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_04_16_200435_create_sfpco_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_04_16_200449_create_sfpcoitem_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_04_16_200516_create_sfpso_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_04_16_200528_create_sfpsoitem_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_04_16_200614_create_sfitemrecolhimento_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_04_16_240451_create_sfparcela_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/OrdembancariaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/OrdembancariaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_17_155935_create_sfpredocob_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_17_155935_create_sfpredocob_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,35 +18,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_192735_create_sfpadrao_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            <state relative-caret-position="280">
+              <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_17_155935_create_sfpredocob_table.php">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_17_161711_create_sfpredocdarf_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="38" column="11" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="38" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_200528_create_sfpsoitem_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="36" column="11" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="36" selection-end-column="11" />
+            <state relative-caret-position="600">
+              <caret line="32" column="11" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="32" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_17_161313_create_sfpredocns_table.php">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_17_162101_create_sfpredocdar_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+            <state relative-caret-position="505">
+              <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -87,8 +67,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2019_03_29_135742_create_unidades_table.php" />
-        <option value="$PROJECT_DIR$/app/Models/Empenho.php" />
         <option value="$PROJECT_DIR$/app/Models/Credor.php" />
         <option value="$PROJECT_DIR$/app/Models/Empenhodetalhado.php" />
         <option value="$PROJECT_DIR$/app/Models/Planointerno.php" />
@@ -136,8 +114,10 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_04_17_200422_create_sfdocrelacionado_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_16_200642_create_sfpredoc_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_17_160829_create_sfdomiciliobancario_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_04_17_155935_create_sfpredocob_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_17_161313_create_sfpredocns_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_04_17_155935_create_sfpredocob_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_04_17_161711_create_sfpredocdarf_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_04_17_162101_create_sfpredocdar_table.php" />
       </list>
     </option>
   </component>
@@ -350,12 +330,12 @@
       <workItem from="1555422344352" duration="743000" />
       <workItem from="1555433482412" duration="695000" />
       <workItem from="1555503868864" duration="11691000" />
-      <workItem from="1555517450254" duration="300000" />
+      <workItem from="1555517450254" duration="813000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85240000" />
+    <option name="totallyTimeSpent" value="85753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -387,20 +367,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_29_135742_create_unidades_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Unidade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Empenhodetalhado.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -684,13 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_192735_create_sfpadrao_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_17_160829_create_sfdomiciliobancario_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -707,15 +666,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_17_155935_create_sfpredocob_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="38" column="11" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="38" selection-end-column="11" />
+        <state relative-caret-position="560">
+          <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_17_161313_create_sfpredocns_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        <state relative-caret-position="360">
+          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_192735_create_sfpadrao_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_17_161711_create_sfpredocdarf_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="32" column="11" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="32" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_17_162101_create_sfpredocdar_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
         </state>
       </provider>
     </entry>

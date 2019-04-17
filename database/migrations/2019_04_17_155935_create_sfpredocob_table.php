@@ -28,7 +28,7 @@ class CreateSfpredocobTable extends Migration
             $table->string('codevntbacen')->nullable();
             $table->integer('codfinalidade')->nullable();
             $table->string('txtctrloriginal')->nullable();
-            $table->decimal('vlrtaxacambio')->nullable();
+            $table->decimal('vlrtaxacambio',17,2)->nullable();
             $table->string('txtprocesso')->nullable();
             $table->integer('coddevolucaospb')->nullable();
             $table->timestamps();
