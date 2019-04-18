@@ -7,4 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Sftramite extends Model
 {
     protected $table = 'sftramite';
+
+    protected $fillable = [
+        'txtLocal',
+        'dtEntrada',
+        'DtSaida',
+    ];
 }

@@ -2,8 +2,8 @@
 
 return [
 
-    'path_pendentes' => 'Z:\STA/RECEBIDOS/',
-    'path_processados' => 'Z:\STA/PROCESSADOS/',
+    'path_pendentes' => 'C:\XML/RECEBIDOS/',
+    'path_processados' => 'C:\XML/PROCESSADOS/',
 
 
     /*

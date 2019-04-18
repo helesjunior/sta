@@ -8,6 +8,20 @@ class Sfdadosbasicos extends Model
 {
     protected $table = 'sfdadosbasicos';
 
+    protected $fillable = [
+        'dtEmis',
+        'dtVenc',
+        'codUgPgto',
+        'vlr',
+        'txtObser',
+        'txtInfoAdic',
+        'vlrTaxaCambio',
+        'txtProcesso',
+        'dtAteste',
+        'codCredorDevedor',
+        'dtPgtoReceb',
+    ];
+
     public function docOrigem()
     {
         return $this->hasMany(Sfdocorigem::class);

@@ -7,5 +7,8 @@ use App\Http\Controllers\Controller;
 
 class SfdadosbasicosController extends Controller
 {
-    //
+    public function inserirSfdadosBasicos($dado, $model)
+    {
+
+    }
 }

@@ -20,7 +20,7 @@ class CreateSfdadosbasicosTable extends Migration
             $table->date('dtVenc')->nullable();
             $table->integer('codUgPgto')->nullable();
             $table->decimal('vlr',17,2)->nullable();
-            $table->string('txtObser')->nullable();
+            $table->text('txtObser')->nullable();
             $table->string('txtInfoAdic')->nullable();
             $table->decimal('vlrTaxaCambio',17,2)->nullable();
             $table->string('txtProcesso')->nullable();
