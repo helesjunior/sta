@@ -15,6 +15,8 @@ class CreateSfdomiciliobancarioTable extends Migration
     {
         Schema::create('sfdomiciliobancario', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->nullableMorphs('numDomiBancFavoable');
+            $table->nullableMorphs('numDomiBancPgtoable');
             $table->morphs('sfdomiciliobancarioable');
             $table->integer('banco')->nullable();
             $table->integer('agencia')->nullable();

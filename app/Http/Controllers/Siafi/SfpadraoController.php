@@ -20,6 +20,10 @@ class SfpadraoController extends Controller
 
     }
 
+    /**
+     * @param $dado
+     * @return Sfpadrao
+     */
     public function inserirSfpadrao($dado)
     {
         $sfpadrao = new Sfpadrao;
@@ -72,6 +76,40 @@ class SfpadraoController extends Controller
                     'dtEntrada' => $tramite->dtEntrada,
                     'DtSaida' => $tramite->DtSaida,
                 ]);
+            }
+        }
+
+        if (isset($dado->pco)) {
+            foreach ($dado->pco as $pco) {
+                $sfpadrao->pco()->create([
+                    'numSeqItem' => $pco->numSeqItem,
+                    'codSit' => $pco->codSit,
+                    'codUgEmpe' => $pco->codUgEmpe,
+                    'indrTemContrato' => $pco->indrTemContrato,
+                    'txtInscrD' => $pco->txtInscrD,
+                    'numClassD' => $pco->numClassD ?? 0,
+                    'txtInscrE' => $pco->txtInscrE,
+                    'numClassE' => $pco->numClassE ?? 0,
+                ]);
+            }
+        }
+
+        if (isset($dado->pco->pcoItem)) {
+            foreach ($dado->pco->pcoItem as $pcoitem) {
+                $sfpadrao->pco->pcoItem()->create([
+                    'numSeqItem' => $pcoitem->numSeqItem,
+                    'numEmpe' => $pcoitem->numEmpe,
+                    'codSubItemEmpe' => $pcoitem->codSubItemEmpe ?? 0,
+                    'indrLiquidado' => $pcoitem->indrLiquidado,
+                    'vlr' => $pcoitem->vlr,
+                    'txtInscrA' => $pcoitem->txtInscrA,
+                    'numClassA' => $pcoitem->numClassA ?? 0,
+                    'txtInscrB' => $pcoitem->txtInscrB,
+                    'numClassB' => $pcoitem->numClassB ?? 0,
+                    'txtInscrC' => $pcoitem->txtInscrC,
+                    'numClassC' => $pcoitem->numClassC ?? 0,
+                ]);
+
             }
         }
 

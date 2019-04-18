@@ -10,6 +10,6 @@ class Sfpredocns extends Model
 
     public function numDomiBancPgto()
     {
-        return $this->morphOne(Sfdomiciliobancario::class, 'sfdomiciliobancarioable');
+        return $this->morphOne(Sfdomiciliobancario::class, 'numDomiBancPgtoable');
     }
 }

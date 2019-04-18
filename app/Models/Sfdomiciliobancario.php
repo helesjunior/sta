@@ -8,7 +8,12 @@ class Sfdomiciliobancario extends Model
 {
     protected $table = 'sfdomiciliobancario';
 
-    public function sfdomiciliobancarioable()
+    public function numDomiBancFavoable()
+    {
+        $this->morphTo();
+    }
+
+    public function numDomiBancPgtoable()
     {
         $this->morphTo();
     }
