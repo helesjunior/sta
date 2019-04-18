@@ -109,7 +109,6 @@ class SfpadraoController extends Controller
                     'txtInscrC' => $pcoitem->txtInscrC,
                     'numClassC' => $pcoitem->numClassC ?? 0,
                 ]);
-
             }
         }
 

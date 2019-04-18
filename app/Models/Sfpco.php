@@ -16,7 +16,7 @@ class Sfpco extends Model
         'txtInscrD',
         'numClassD',
         'txtInscrE',
-        'numClassE',
+        'numClassE'
     ];
 
     public function pcoItem()

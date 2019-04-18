@@ -19,6 +19,7 @@ class Sfpcoitem extends Model
         'txtInscrB',
         'numClassB',
         'txtInscrC',
-        'numClassC',
+        'numClassC'
     ];
+
 }
