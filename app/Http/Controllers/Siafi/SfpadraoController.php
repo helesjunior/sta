@@ -96,19 +96,23 @@ class SfpadraoController extends Controller
 
         if (isset($dado->pco->pcoItem)) {
             foreach ($dado->pco->pcoItem as $pcoitem) {
-                $sfpadrao->pco->pcoItem()->create([
-                    'numSeqItem' => $pcoitem->numSeqItem,
-                    'numEmpe' => $pcoitem->numEmpe,
-                    'codSubItemEmpe' => $pcoitem->codSubItemEmpe ?? 0,
-                    'indrLiquidado' => $pcoitem->indrLiquidado,
-                    'vlr' => $pcoitem->vlr,
-                    'txtInscrA' => $pcoitem->txtInscrA,
-                    'numClassA' => $pcoitem->numClassA ?? 0,
-                    'txtInscrB' => $pcoitem->txtInscrB,
-                    'numClassB' => $pcoitem->numClassB ?? 0,
-                    'txtInscrC' => $pcoitem->txtInscrC,
-                    'numClassC' => $pcoitem->numClassC ?? 0,
-                ]);
+                foreach ($sfpadrao->pco as $pco)
+                {
+                    $pco->pcoItens()->create([
+                        'numSeqItem' => $pcoitem->numSeqItem,
+                        'numEmpe' => $pcoitem->numEmpe,
+                        'codSubItemEmpe' => $pcoitem->codSubItemEmpe ?? 0,
+                        'indrLiquidado' => $pcoitem->indrLiquidado,
+                        'vlr' => $pcoitem->vlr,
+                        'txtInscrA' => $pcoitem->txtInscrA,
+                        'numClassA' => $pcoitem->numClassA ?? 0,
+                        'txtInscrB' => $pcoitem->txtInscrB,
+                        'numClassB' => $pcoitem->numClassB ?? 0,
+                        'txtInscrC' => $pcoitem->txtInscrC,
+                        'numClassC' => $pcoitem->numClassC ?? 0,
+                    ]);
+                }
+
             }
         }
 

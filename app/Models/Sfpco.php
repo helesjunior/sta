@@ -16,17 +16,18 @@ class Sfpco extends Model
         'txtInscrD',
         'numClassD',
         'txtInscrE',
-        'numClassE'
+        'numClassE',
     ];
 
-    public function pcoItem()
+    public function pcoItens()
     {
         return $this->hasMany(Sfpcoitem::class);
     }
 
-    public function cronBaixaPatrimonial()
-    {
-        return $this->morphOne(Sfcronbaixapatrimonial::class, 'sfcronbaixapatrimonialable');
-    }
+
+//    public function cronBaixaPatrimonial()
+//    {
+//        return $this->morphOne(Sfcronbaixapatrimonial::class, 'sfcronbaixapatrimonialable');
+//    }
 
 }
