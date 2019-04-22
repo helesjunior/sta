@@ -13,7 +13,7 @@ class Sfcronbaixapatrimonial extends Model
         return $this->morphTo();
     }
 
-    public function parcela()
+    public function parcelas()
     {
         return $this->hasMany(Sfparcela::class);
     }

@@ -25,9 +25,9 @@ class Sfpco extends Model
     }
 
 
-//    public function cronBaixaPatrimonial()
-//    {
-//        return $this->morphOne(Sfcronbaixapatrimonial::class, 'sfcronbaixapatrimonialable');
-//    }
+    public function cronBaixaPatrimonial()
+    {
+        return $this->morphOne(Sfcronbaixapatrimonial::class, 'sfcronbaixapatrimonialable');
+    }
 
 }

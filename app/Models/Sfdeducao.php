@@ -8,6 +8,25 @@ class Sfdeducao extends Model
 {
     protected $table = 'sfdeducao';
 
+
+    protected $fillable = [
+        'numSeqItem',
+        'codSit',
+        'dtVenc',
+        'dtPgtoReceb',
+        'codUgPgto',
+        'vlr',
+        'txtInscrA',
+        'numClassA',
+        'txtInscrB',
+        'numClassB',
+        'txtInscrC',
+        'numClassC',
+        'txtInscrD',
+        'numClassD',
+    ];
+
+
     public function itemRecolhimento()
     {
         return $this->morphMany(Sfitemrecolhimento::class, 'sfitemrecolhimentoable');

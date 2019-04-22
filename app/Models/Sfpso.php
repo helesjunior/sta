@@ -8,7 +8,17 @@ class Sfpso extends Model
 {
     protected $table = 'sfpso';
 
-    public function psoItem()
+
+    protected $fillable = [
+        'numSeqItem',
+        'codSit',
+        'txtInscrE',
+        'numClassE',
+        'txtInscrF',
+        'numClassF',
+    ];
+
+    public function psoItens()
     {
         return $this->hasMany(Sfpsoitem::class);
     }

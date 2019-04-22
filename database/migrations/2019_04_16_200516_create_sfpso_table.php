@@ -17,7 +17,7 @@ class CreateSfpsoTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('sfpadrao_id');
             $table->bigInteger('numSeqItem')->nullable();
-            $table->string('CodSit')->nullable();
+            $table->string('codSit')->nullable();
             $table->string('txtInscrE')->nullable();
             $table->integer('numClassE')->nullable();
             $table->string('txtInscrF')->nullable();

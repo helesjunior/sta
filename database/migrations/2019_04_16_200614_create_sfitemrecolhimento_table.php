@@ -24,6 +24,7 @@ class CreateSfitemrecolhimentoTable extends Migration
             $table->decimal('vlrJuros',17,2)->nullable();
             $table->decimal('vlrOutrasEnt',17,2)->nullable();
             $table->decimal('vlrAtmMultaJuros',17,2)->nullable();
+            $table->timestamps();
         });
 
     }

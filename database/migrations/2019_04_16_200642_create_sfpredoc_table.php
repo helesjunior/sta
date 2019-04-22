@@ -17,6 +17,7 @@ class CreateSfpredocTable extends Migration
             $table->bigIncrements('id');
             $table->morphs('sfpredocable');
             $table->string('txtObser')->nullable();
+            $table->timestamps();
         });
 
     }

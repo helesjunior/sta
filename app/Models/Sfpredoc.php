@@ -8,6 +8,10 @@ class Sfpredoc extends Model
 {
     protected $table = 'sfpredoc';
 
+    protected $fillable = [
+        'txtObser'
+    ];
+
     public function sfpredocable()
     {
         return $this->morphTo();
