@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5f7bbf1-8681-41d7-955f-e279d69fe13c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpadraoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpadraoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfpco.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfpco.php" afterDir="false" />
-    </list>
+    <list default="true" id="f5f7bbf1-8681-41d7-955f-e279d69fe13c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpadraoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="97" column="49" selection-start-line="97" selection-start-column="49" selection-end-line="97" selection-end-column="49" />
+            <state relative-caret-position="527">
+              <caret line="49" column="11" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="49" selection-end-column="11" />
               <folding>
                 <element signature="e#46#70#0#PHP" expanded="true" />
               </folding>
@@ -348,12 +344,12 @@
       <workItem from="1555517450254" duration="18277000" />
       <workItem from="1555610283828" duration="7674000" />
       <workItem from="1555626452602" duration="950000" />
-      <workItem from="1555627685714" duration="666000" />
+      <workItem from="1555627685714" duration="716000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112507000" />
+    <option name="totallyTimeSpent" value="112557000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -735,8 +731,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpadraoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="97" column="49" selection-start-line="97" selection-start-column="49" selection-end-line="97" selection-end-column="49" />
+        <state relative-caret-position="527">
+          <caret line="49" column="11" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="49" selection-end-column="11" />
           <folding>
             <element signature="e#46#70#0#PHP" expanded="true" />
           </folding>
