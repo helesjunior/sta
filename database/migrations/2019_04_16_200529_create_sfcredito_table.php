@@ -17,7 +17,7 @@ class CreateSfcreditoTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('sfpadrao_id');
             $table->bigInteger('numSeqItem')->nullable();
-            $table->string('CodSit')->nullable();
+            $table->string('codSit')->nullable();
             $table->boolean('indrLiquidado')->nullable();
             $table->decimal('vlr',17,2)->nullable();
             $table->integer('codFontRecur')->nullable();

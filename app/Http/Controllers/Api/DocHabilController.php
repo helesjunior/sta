@@ -93,15 +93,8 @@ class DocHabilController extends Controller
 //                    $sfpadrao = $busca->atualizaSfpadrao($dochabil);
 
                 }
-
-
-
                 echo $dochabil->codUgEmit.''.$dochabil->anoDH.''.$dochabil->codTipoDH.''.$dochabil->numDH.'<br>';
-
             }
-
-            dd($registro);
-
         }
 
     }
