@@ -10,6 +10,7 @@ class SfdeducaoController extends Controller
     public function inserirSfdeducao($dado,$sfpadrao)
     {
         foreach ($dado->deducao as $deducao) {
+
                 $sfpadrao->deducao()->create([
                     'numSeqItem' => $deducao->numSeqItem,
                     'codSit' => $deducao->codSit,
@@ -31,6 +32,10 @@ class SfdeducaoController extends Controller
                     $sfitemrecolhimento = new SfitemrecolhimentoController;
                     $sfpadrao = $sfitemrecolhimento->inserirSfitemRecolhimentoDeducao($deducao,$sfpadrao);
                 }
+
+//                if($deducao->vlr == '238.10'){
+//                    dd($deducao, $sfpadrao->deducao);
+//                }
 
                 if (isset($deducao->predoc)) {
                     $sfpredoc = new SfpredocController;

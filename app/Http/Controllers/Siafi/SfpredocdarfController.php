@@ -7,10 +7,10 @@ use App\Http\Controllers\Controller;
 
 class SfpredocdarfController extends Controller
 {
-    public function inserirSfpreDocDarfDeducao($predoc,$sfpadrao)
+    public function inserirSfpreDocDarfDeducao($predoc, $sfpadrao)
     {
-        foreach ($predoc->predocDARF as $predocDarf) {
-            foreach ($sfpadrao->deducao as $deducao) {
+        foreach ($sfpadrao->deducao as $deducao) {
+            foreach ($predoc->predocDARF as $predocDarf) {
                 $deducao->predoc->predocDARF()->create([
                     'codTipoDARF' => $predocDarf->codTipoDARF,
                     'codRecurso' => $predocDarf->codRecurso,
