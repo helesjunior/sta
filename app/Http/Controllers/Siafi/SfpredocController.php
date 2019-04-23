@@ -20,7 +20,19 @@ class SfpredocController extends Controller
                 if (isset($predoc->predocOB))
                 {
                     $sfpredocob = new SfpredocobController;
-                    $sfpadrao = $sfpredocob->inserirSfpreDocOb($predoc,$sfpadrao);
+                    $sfpadrao = $sfpredocob->inserirSfpreDocObDeducao($predoc,$sfpadrao);
+                }
+
+                if (isset($predoc->predocNS))
+                {
+                    $sfpredocns = new SfpredocnsController;
+                    $sfpadrao = $sfpredocns->inserirSfpreDocNsDeducao($predoc,$sfpadrao);
+                }
+
+                if (isset($predoc->predocDARF))
+                {
+                    $sfpredocdarf = new SfpredocdarfController;
+                    $sfpadrao = $sfpredocdarf->inserirSfpreDocDarfDeducao($predoc,$sfpadrao);
                 }
 
             }

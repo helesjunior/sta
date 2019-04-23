@@ -7,11 +7,11 @@ use App\Http\Controllers\Controller;
 
 class SfpredocobController extends Controller
 {
-    public function inserirSfpreDocOb($predoc,$sfpadrao)
+    public function inserirSfpreDocObDeducao($predoc,$sfpadrao)
     {
         foreach ($predoc->predocOB as $predocOb) {
             foreach ($sfpadrao->deducao as $deducao) {
-                $deducao->predoc->predocOb()->create([
+                $deducao->predoc->predocOB()->create([
                     'codTipoOB' => $predocOb->codTipoOB,
                     'codCredorDevedor' => $predocOb->codCredorDevedor,
                     'codNumLista' => $predocOb->codNumLista,
@@ -29,6 +29,22 @@ class SfpredocobController extends Controller
                     'txtProcesso' => $predocOb->txtProcesso,
                     'codDevolucaoSPB' => $predocOb->codDevolucaoSPB ?? null,
                 ]);
+
+
+                if (isset($predocOb->numDomiBancFavo))
+                {
+                    $sfdomiciliobancario = new SfdomiciliobancarioController;
+                    $sfpadrao = $sfdomiciliobancario->inserirSfnumDomiBancFavoPreDocOb($predocOb,$sfpadrao);
+                }
+
+
+                if (isset($predocOb->numDomiBancPgto))
+                {
+                    $sfdomiciliobancario = new SfdomiciliobancarioController;
+                    $sfpadrao = $sfdomiciliobancario->inserirSfnumDomiBancPgtoPreDocOb($predocOb,$sfpadrao);
+                }
+
+
             }
         }
 

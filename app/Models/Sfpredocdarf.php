@@ -7,4 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 class Sfpredocdarf extends Model
 {
     protected $table = 'sfpredocdarf';
+
+    protected $fillable = [
+        'codTipoDARF',
+        'codRecurso',
+        'dtPrdoApuracao',
+        'numRef',
+        'txtProcesso',
+        'vlrRctaBrutaAcum',
+        'vlrPercentual',
+        'numCodBarras',
+        'vinculacaoPgto',
+    ];
+
 }

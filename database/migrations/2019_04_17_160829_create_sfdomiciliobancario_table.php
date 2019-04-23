@@ -17,7 +17,6 @@ class CreateSfdomiciliobancarioTable extends Migration
             $table->bigIncrements('id');
             $table->nullableMorphs('numDomiBancFavoable');
             $table->nullableMorphs('numDomiBancPgtoable');
-            $table->morphs('sfdomiciliobancarioable');
             $table->integer('banco')->nullable();
             $table->integer('agencia')->nullable();
             $table->string('conta')->nullable();

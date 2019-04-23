@@ -27,7 +27,6 @@ class SfpadraoController extends Controller
     public function inserirSfpadrao($dado)
     {
         $sfpadrao = new Sfpadrao;
-
         $sfpadrao->codUgEmit = $dado->codUgEmit;
         $sfpadrao->anoDH = $dado->anoDH;
         $sfpadrao->codTipoDH = $dado->codTipoDH;
@@ -49,19 +48,15 @@ class SfpadraoController extends Controller
             $sfpadrao = $sfpso->inserirSfpso($dado,$sfpadrao);
         }
 
-
         if (isset($dado->credito)) {
             $sfcredito = new SfcreditoController;
             $sfpadrao = $sfcredito->inserirSfcredito($dado,$sfpadrao);
         }
 
-
         if (isset($dado->outrosLanc)) {
             $sfoutroslanc = new SfoutroslancController;
             $sfpadrao = $sfoutroslanc->inserirSfoutrosLanc($dado,$sfpadrao);
         }
-
-
 
         if (isset($dado->deducao)) {
             $sfdeducao = new SfdeducaoController;
