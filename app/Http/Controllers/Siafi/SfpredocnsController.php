@@ -7,23 +7,20 @@ use App\Http\Controllers\Controller;
 
 class SfpredocnsController extends Controller
 {
-    public function inserirSfpreDocNsDeducao($predoc,$sfpadrao)
+    public function inserirSfpreDocNsDeducao($predoc, $sfpadrao)
     {
         foreach ($predoc->predocNS as $predocNs) {
-            foreach ($sfpadrao->deducao as $deducao) {
-                $deducao->predoc->predocNS()->create([
-                    'codCredorDevedor' => $predocNs->codCredorDevedor,
-                    'codTipoBanco' => $predocNs->codTipoBanco,
-                    'codInscGen' => $predocNs->codInscGen,
-                ]);
+            $sfpadrao->predoc->predocNS()->create([
+                'codCredorDevedor' => $predocNs->codCredorDevedor,
+                'codTipoBanco' => $predocNs->codTipoBanco,
+                'codInscGen' => $predocNs->codInscGen,
+            ]);
 
-                if (isset($predocNs->numDomiBancPgto))
-                {
-                    $sfdomiciliobancario = new SfdomiciliobancarioController;
-                    $sfpadrao = $sfdomiciliobancario->inserirSfnumDomiBancPgtoPreDocNs($predocNs,$sfpadrao);
-                }
-
+            if (isset($predocNs->numDomiBancPgto)) {
+                $sfdomiciliobancario = new SfdomiciliobancarioController;
+                $sfpadrao = $sfdomiciliobancario->inserirSfnumDomiBancPgtoPreDocNs($predocNs, $sfpadrao);
             }
+
         }
 
         return $sfpadrao;

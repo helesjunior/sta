@@ -7,34 +7,33 @@ use App\Http\Controllers\Controller;
 
 class SfpredocController extends Controller
 {
-    public function inserirSfpreDocDeducao($deducao,$sfpadrao)
+    public function inserirSfpreDocDeducao($ded, $sfpadrao)
     {
-        foreach ($deducao->predoc as $predoc)
-        {
-            foreach ($sfpadrao->deducao as $deducao)
+        foreach ($sfpadrao->deducao as $deducao) {
+            if($deducao->numSeqItem == $ded->numSeqItem)
             {
-                $deducao->predoc()->create([
-                    'txtObser' => $predoc->txtObser,
-                ]);
+                foreach ($ded->predoc as $predoc) {
 
-                if (isset($predoc->predocOB))
-                {
-                    $sfpredocob = new SfpredocobController;
-                    $sfpadrao = $sfpredocob->inserirSfpreDocObDeducao($predoc,$sfpadrao);
+                    $deducao->predoc()->create([
+                        'txtObser' => $predoc->txtObser,
+                    ]);
+
+                    if (isset($predoc->predocOB)) {
+                        $sfpredocob = new SfpredocobController;
+                        $deducao = $sfpredocob->inserirSfpreDocObDeducao($predoc, $deducao);
+                    }
+
+                    if (isset($predoc->predocNS)) {
+                        $sfpredocns = new SfpredocnsController;
+                        $deducao = $sfpredocns->inserirSfpreDocNsDeducao($predoc, $deducao);
+                    }
+
+                    if (isset($predoc->predocDARF)) {
+                        $sfpredocdarf = new SfpredocdarfController;
+                        $deducao = $sfpredocdarf->inserirSfpreDocDarfDeducao($predoc, $deducao);
+                    }
+
                 }
-
-                if (isset($predoc->predocNS))
-                {
-                    $sfpredocns = new SfpredocnsController;
-                    $sfpadrao = $sfpredocns->inserirSfpreDocNsDeducao($predoc,$sfpadrao);
-                }
-
-                if (isset($predoc->predocDARF))
-                {
-                    $sfpredocdarf = new SfpredocdarfController;
-                    $sfpadrao = $sfpredocdarf->inserirSfpreDocDarfDeducao($predoc,$sfpadrao);
-                }
-
             }
 
         }
