@@ -2,13 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5f7bbf1-8681-41d7-955f-e279d69fe13c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdeducaoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfitemrecolhimentoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocobController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdeducaoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdeducaoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdomiciliobancarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdomiciliobancarioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocdarfController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocdarfController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocnsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocnsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocobController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocobController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfacrescimoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfacrescimoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfcentrocustoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfcentrocustoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfcompensacaoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfcompensacaoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfcreditoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfcreditoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfcronbaixapatrimonialController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfcronbaixapatrimonialController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdadosbasicosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdadosbasicosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdadospgtoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdadospgtoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdeducaoController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdespesaanularController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdespesaanularController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdespesaanularitemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdespesaanularitemController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdoccontabilizacaoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdoccontabilizacaoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdocorigemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdocorigemController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdocrelacionadoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdocrelacionadoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdomiciliobancarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdomiciliobancarioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfencargoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfencargoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfitemrecolhimentoController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfoutroslancController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfoutroslancController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpadraoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpadraoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfparcelaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfparcelaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpcoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpcoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpcoitemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpcoitemController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocdarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocdarController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocdarfController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocdarfController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocgfipController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocgfipController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocgpsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocgpsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocgruController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocgruController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocnsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocnsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocobController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocpfController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocpfController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpsoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpsoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpsoitemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpsoitemController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfrelcomitemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfrelcomitemController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfrelcomitemvalorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfrelcomitemvalorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfrelsemitemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfrelsemitemController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfrelsemitemvalorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfrelsemitemvalorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SftramiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SftramiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Sfdeducao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfdeducao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Sfitemrecolhimento.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfitemrecolhimento.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Sfpadrao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfpadrao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Sfpredoc.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfpredoc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Sfpredocdarf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfpredocdarf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,72 +63,90 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="13" column="13" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocobController.php">
+        <entry file="file://$PROJECT_DIR$/app/Models/Sfdeducao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="40" column="103" selection-start-line="40" selection-start-column="94" selection-end-line="40" selection-end-column="103" />
+            <state relative-caret-position="484">
+              <caret line="77" column="42" selection-start-line="70" selection-start-column="8" selection-end-line="77" selection-end-column="42" />
               <folding>
-                <element signature="e#46#74#0#PHP" expanded="true" />
+                <element signature="e#30#69#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdomiciliobancarioController.php">
+        <entry file="file://$PROJECT_DIR$/app/Models/Sfpredoc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Sfpredocdarf.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Sfitemrecolhimento.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="75" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="75" />
+              <folding>
+                <element signature="e#30#69#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_200614_create_sfitemrecolhimento_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Sfpadrao.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="684">
+              <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+              <folding>
+                <element signature="e#30#69#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_192735_create_sfpadrao_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <caret line="17" column="39" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="39" />
+              <caret line="18" column="35" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="35" />
+              <caret line="19" column="36" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="36" />
+              <caret line="20" column="35" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocnsController.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocdarfController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="36" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="36" />
+            <state relative-caret-position="669">
+              <caret line="96" column="19" lean-forward="true" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
               <folding>
-                <element signature="e#46#74#0#PHP" expanded="true" />
+                <element signature="e#44#94#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdeducaoController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
-              <caret line="38" column="20" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpcoController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -123,7 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfdadosbasicos.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_16_193603_create_sfdadosbasicos_table.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfdocorigem.php" />
@@ -131,7 +191,6 @@
         <option value="$PROJECT_DIR$/app/Models/Sfdocrelacionado.php" />
         <option value="$PROJECT_DIR$/app/Models/Sftramite.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfpredocns.php" />
-        <option value="$PROJECT_DIR$/app/Models/Sfpadrao.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfpcoitem.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_16_200449_create_sfpcoitem_table.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfpco.php" />
@@ -140,19 +199,13 @@
         <option value="$PROJECT_DIR$/app/Models/Sfpsoitem.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfpso.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfoutroslanc.php" />
-        <option value="$PROJECT_DIR$/app/Models/Sfitemrecolhimento.php" />
-        <option value="$PROJECT_DIR$/app/Models/Sfdeducao.php" />
-        <option value="$PROJECT_DIR$/app/Models/Sfpredoc.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_04_16_200614_create_sfitemrecolhimento_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_16_200642_create_sfpredoc_table.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfparcela.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_16_200423_create_sftramite_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdocorigemController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdocrelacionadoController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SftramiteController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdadosbasicosController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpcoitemController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpsoController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpsoitemController.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfcredito.php" />
@@ -162,18 +215,26 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfoutroslancController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfcronbaixapatrimonialController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfparcelaController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfitemrecolhimentoController.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfdomiciliobancario.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_17_160829_create_sfdomiciliobancario_table.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfpredocob.php" />
-        <option value="$PROJECT_DIR$/app/Models/Sfpredocdarf.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpadraoController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocobController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocnsController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdomiciliobancarioController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocdarfController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdeducaoController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfitemrecolhimentoController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocobController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocController.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpadraoController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdadosbasicosController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdeducaoController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_04_16_200614_create_sfitemrecolhimento_table.php" />
+        <option value="$PROJECT_DIR$/app/Models/Sfitemrecolhimento.php" />
+        <option value="$PROJECT_DIR$/app/Models/Sfdeducao.php" />
+        <option value="$PROJECT_DIR$/app/Models/Sfpredoc.php" />
+        <option value="$PROJECT_DIR$/app/Models/Sfpredocdarf.php" />
+        <option value="$PROJECT_DIR$/app/Models/Sfpadrao.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php" />
       </list>
     </option>
   </component>
@@ -262,17 +323,16 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1910" />
-    <option name="y" value="-10" />
-    <option name="width" value="1552" />
-    <option name="height" value="854" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -310,14 +370,6 @@
               <item name="sta" type="b2602c69:ProjectViewProjectNode" />
               <item name="sta" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Siafi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sta" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -335,15 +387,17 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sc" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -398,17 +452,19 @@
       <workItem from="1555626452602" duration="950000" />
       <workItem from="1555627685714" duration="716000" />
       <workItem from="1555959365109" duration="6376000" />
+      <workItem from="1556188787181" duration="7704000" />
+      <workItem from="1556213507050" duration="9555000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145571000" />
+    <option name="totallyTimeSpent" value="162891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18710022" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -434,27 +490,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfpredocns.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_200435_create_sfpco_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="30" column="74" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_200449_create_sfpcoitem_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Sfdocorigem.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -490,31 +525,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_200531_create_sfdeducao_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfitemrecolhimento.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="42" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Sfdadosbasicos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_200614_create_sfitemrecolhimento_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -539,13 +553,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Sfcronbaixapatrimonial.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -560,45 +567,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdocorigemController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdocorigemController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdocrelacionadoController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdocrelacionadoController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SftramiteController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SftramiteController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpcoitemController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpcoitemController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="88" column="42" lean-forward="true" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
-          <folding>
-            <element signature="e#44#94#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpsoitemController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpsoitemController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
@@ -612,13 +609,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfcreditoController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfcreditoController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-          <folding>
-            <element signature="e#46#74#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -629,7 +623,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpsoController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpsoController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
@@ -657,38 +651,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfparcelaController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfparcelaController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
           <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfcronbaixapatrimonialController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfcronbaixapatrimonialController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="29" column="42" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfoutroslancController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfoutroslancController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="31" column="79" lean-forward="true" selection-start-line="31" selection-start-column="79" selection-end-line="31" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfpadrao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="30" column="30" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfitemrecolhimentoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -696,13 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfdeducao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="36" column="61" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -720,89 +693,187 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfpredocdarf.php">
+    <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        <state relative-caret-position="72">
+          <caret line="4" column="41" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdadosbasicosController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        <state relative-caret-position="306">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding>
+            <element signature="e#46#74#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpcoController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocobController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#46#74#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfpredoc.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdomiciliobancarioController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="289">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpadraoController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocnsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="62" column="65" selection-start-line="62" selection-start-column="65" selection-end-line="62" selection-end-column="65" />
+        <state relative-caret-position="153">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpcoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdadosbasicosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
           <folding>
             <element signature="e#46#70#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocnsController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpadraoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        <state relative-caret-position="411">
+          <caret line="75" column="25" selection-start-line="30" selection-start-column="8" selection-end-line="75" selection-end-column="25" />
+          <folding>
+            <element signature="e#46#70#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdomiciliobancarioController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfitemrecolhimentoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="22" column="15" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="22" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdeducaoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_200531_create_sfdeducao_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_192735_create_sfpadrao_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="39" />
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="35" />
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="36" />
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocdarfController.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_200614_create_sfitemrecolhimento_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="36" />
+        <state relative-caret-position="255">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocdarfController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="72" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="21" selection-end-column="72" />
           <folding>
             <element signature="e#46#74#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocobController.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfdeducao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="40" column="103" selection-start-line="40" selection-start-column="94" selection-end-line="40" selection-end-column="103" />
+        <state relative-caret-position="484">
+          <caret line="77" column="42" selection-start-line="70" selection-start-column="8" selection-end-line="77" selection-end-column="42" />
           <folding>
-            <element signature="e#46#74#0#PHP" expanded="true" />
+            <element signature="e#30#69#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdeducaoController.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_17_161711_create_sfpredocdarf_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="38" column="20" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="20" />
+        <state relative-caret-position="396">
+          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocController.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfpredoc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="101">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfpredocdarf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfitemrecolhimento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="75" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="75" />
+          <folding>
+            <element signature="e#30#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfpadrao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+          <folding>
+            <element signature="e#30#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="669">
+          <caret line="96" column="19" lean-forward="true" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
+          <folding>
+            <element signature="e#44#94#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

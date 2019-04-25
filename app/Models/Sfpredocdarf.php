@@ -9,6 +9,7 @@ class Sfpredocdarf extends Model
     protected $table = 'sfpredocdarf';
 
     protected $fillable = [
+        'sfpredoc_id',
         'codTipoDARF',
         'codRecurso',
         'dtPrdoApuracao',
@@ -19,5 +20,14 @@ class Sfpredocdarf extends Model
         'numCodBarras',
         'vinculacaoPgto',
     ];
+
+
+    public function createFromXML(array $predocdarf)
+    {
+        $this->fill($predocdarf);
+        $this->save();
+
+        return $this;
+    }
 
 }

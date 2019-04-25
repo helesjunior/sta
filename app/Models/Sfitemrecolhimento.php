@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
 
 class Sfitemrecolhimento extends Model
 {
@@ -20,7 +21,19 @@ class Sfitemrecolhimento extends Model
         'vlrAtmMultaJuros',
     ];
 
-    public function sfitemrecolhimentoable(){
+    public function createFromXML(array $itemRecolhimento)
+    {
+
+        $this->fill($itemRecolhimento);
+        $this->sfitemrecolhimentoable()->associate($itemRecolhimento['morph']);
+        $this->save();
+
+        return $this;
+    }
+
+
+    public function sfitemrecolhimentoable()
+    {
         return $this->morphTo();
     }
 }

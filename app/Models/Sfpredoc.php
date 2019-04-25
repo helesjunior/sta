@@ -12,6 +12,32 @@ class Sfpredoc extends Model
         'txtObser'
     ];
 
+
+    public function createFromXML(array $predoc)
+    {
+        $this->fill($predoc);
+        $this->sfpredocable()->associate($predoc['morph']);
+        $this->save();
+
+
+        $this->createPredocDarfFromXml($predoc);
+
+        return $this;
+    }
+
+    private function createPredocDarfFromXml(array $dado)
+    {
+        if (!isset($dado['predocDARF'])) {
+            return;
+        }
+        $predocDARF = $dado['predocDARF'];
+
+        $predocDARF['sfpredoc_id'] = $this->id;
+        $sfpredocdarf = new Sfpredocdarf;
+        $sfpredocdarf->createFromXml($predocDARF);
+    }
+
+
     public function sfpredocable()
     {
         return $this->morphTo();

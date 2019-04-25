@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Siafi\SfpadraoController;
+use App\Http\Controllers\_Siafi\SfpadraoController;
+use App\Models\Sfpadrao;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -75,27 +76,39 @@ class DocHabilController extends Controller
         }
 
         $xml = simplexml_load_string(str_replace(':','',$myfile));
+        $json = json_encode($xml);
+        $array = json_decode($json,TRUE);
 
-        if(isset($xml->ns2CprDhConsultar))
+
+        if(isset($array['ns2CprDhConsultar']))
         {
-            foreach($xml->ns2CprDhConsultar as $dochabil){
+            $i = null;
+            try{
+                foreach($array['ns2CprDhConsultar'] as $key => $dochabil){
+                    $i = $key;
+                    $busca = new Sfpadrao;
+                    $sfpadrao = $busca->createFromXml($dochabil);
 
-                $busca = new SfpadraoController;
 
-                $registro = $busca->buscaSfpadrao($dochabil);
-
-                if(!count($registro)){
-
-                    $sfpadrao = $busca->inserirSfpadrao($dochabil);
-
-                }else{
-
-//                    $sfpadrao = $busca->atualizaSfpadrao($dochabil);
-
+//                echo $dochabil->codUgEmit.''.$dochabil->anoDH.''.$dochabil->codTipoDH.''.$dochabil->numDH.'<br>';
                 }
-                echo $dochabil->codUgEmit.''.$dochabil->anoDH.''.$dochabil->codTipoDH.''.$dochabil->numDH.'<br>';
+            }catch (\Exception $exception){
+
+                echo "Erro Linha: ".$i;
+
+                die();
+
             }
+
         }
 
+    }
+
+    public function xml2array ( $xmlObject, $out = array () )
+    {
+        foreach ( (array) $xmlObject as $index => $node )
+            $out[$index] = ( is_object ( $node ) ) ? $this->xml2array($node) : $node;
+
+        return $out;
     }
 }
