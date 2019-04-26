@@ -16,12 +16,12 @@ class CreateSfcentrocustoTable extends Migration
         Schema::create('sfcentrocusto', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('sfpadrao_id');
-            $table->bigInteger('numSeqItem');
-            $table->string('codCentroCusto');
-            $table->integer('mesReferencia');
-            $table->integer('anoReferencia');
-            $table->integer('codUgBenef');
-            $table->integer('codSIORG');
+            $table->bigInteger('numSeqItem')->nullable();
+            $table->string('codCentroCusto')->nullable();
+            $table->integer('mesReferencia')->nullable();
+            $table->integer('anoReferencia')->nullable();
+            $table->integer('codUgBenef')->nullable();
+            $table->integer('codSIORG')->nullable();
             $table->timestamps();
         });
 

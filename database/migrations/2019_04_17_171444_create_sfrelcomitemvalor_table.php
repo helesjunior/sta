@@ -15,7 +15,13 @@ class CreateSfrelcomitemvalorTable extends Migration
     {
         Schema::create('sfrelcomitemvalor', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->morphs('sfrelcomitemvalorable');
+            $table->nullableMorphs('sfrelcomitemvalorpcoable');
+            $table->nullableMorphs('sfrelcomitemvalorpsoable');
+            $table->nullableMorphs('sfrelcomitemvaloracresdeducaoable');
+            $table->nullableMorphs('sfrelcomitemvaloracresencargoable');
+            $table->nullableMorphs('sfrelcomitemvaloracresdadospgtoable');
+            $table->nullableMorphs('sfrelcomitemvalordespantecipadaable');
+            $table->nullableMorphs('sfrelcomitemvalordespesaanularable');
             $table->bigInteger('numSeqPai')->nullable();
             $table->bigInteger('numSeqItem')->nullable();
             $table->integer('codNatDespDet')->nullable();

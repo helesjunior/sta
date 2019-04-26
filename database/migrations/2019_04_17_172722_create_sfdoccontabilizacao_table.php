@@ -16,10 +16,10 @@ class CreateSfdoccontabilizacaoTable extends Migration
         Schema::create('sfdoccontabilizacao', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('sfpadrao_id');
-            $table->integer('anoDocCont');
-            $table->string('codTipoDocCont');
-            $table->string('numDocCont');
-            $table->integer('codUgEmit');
+            $table->integer('anoDocCont')->nullable();
+            $table->string('codTipoDocCont')->nullable();
+            $table->string('numDocCont')->nullable();
+            $table->integer('codUgEmit')->nullable();
             $table->timestamps();
         });
 

@@ -18,30 +18,57 @@ class Sfpadrao extends Model
 
     public function createFromXml(array $dado)
     {
+        if($this->buscaSfpadrao($dado)){
 
-        try {
-            \DB::beginTransaction();
-
-            $this->fill($dado);
-            $this->save();
-
-            $this->createDadosBasicosFromXml($dado);
-            $this->createPcoFromXml($dado);
-            $this->createPsoFromXml($dado);
-            $this->createDeducaoFromXml($dado);
-            $this->createEncargoFromXml($dado);
-
-
-            \DB::commit();
-        } catch (\Exception $exception) {
-            \DB::rollBack();
-            throw $exception;
+            return;
         }
+
+        $this->fill($dado);
+        $this->save();
+
+        $this->createDadosBasicosFromXml($dado);
+        $this->createPcoFromXml($dado);
+        $this->createPsoFromXml($dado);
+        $this->createCreditoFromXml($dado);
+        $this->createOustrosLancFromXml($dado);
+        $this->createDeducaoFromXml($dado);
+        $this->createEncargoFromXml($dado);
+        $this->createDespesaAnularFromXml($dado);
+        $this->createCompensacaoFromXml($dado);
+        $this->createCentroCustoFromXml($dado);
+        $this->createDadosPagtoFromXml($dado);
+        $this->createDocContabilizacaoFromXml($dado);
+
+//        try {
+//            \DB::beginTransaction();
+//
+//            \DB::commit();
+//        } catch (\Exception $exception) {
+//            \DB::rollBack();
+//            throw $exception;
+//        }
 
 
         return $this;
     }
 
+    private function buscaSfpadrao($dado)
+    {
+        $retorno = false;
+
+        $sfpadrao = $this->where('codUgEmit', $dado['codUgEmit'])
+            ->where('anoDH', $dado['anoDH'])
+            ->where('codTipoDH', $dado['codTipoDH'])
+            ->where('numDH', $dado['numDH'])
+            ->first();
+
+        if(count($sfpadrao)){
+            $retorno = true;
+        }
+
+        return $retorno;
+    }
+    
     private function createDadosBasicosFromXml(array $dado)
     {
         if (!isset($dado['dadosBasicos'])) {
@@ -116,6 +143,118 @@ class Sfpadrao extends Model
             $pso['sfpadrao_id'] = $this->id;
             $sfpso = new Sfpso;
             $sfpso->createFromXml($pso);
+        }
+
+    }
+
+    private function createCreditoFromXml(array $dado)
+    {
+        if (!isset($dado['credito'])) {
+            return;
+        }
+
+        $creditos = isset($dado['credito'][0]) ? $dado['credito'] : [$dado['credito']];
+
+        foreach ($creditos as $credito) {
+            $credito['sfpadrao_id'] = $this->id;
+            $sfcredito = new Sfcredito;
+            $sfcredito->createFromXml($credito);
+        }
+
+    }
+
+    private function createOustrosLancFromXml(array $dado)
+    {
+        if (!isset($dado['outrosLanc'])) {
+            return;
+        }
+
+        $outrosLancs = isset($dado['outrosLanc'][0]) ? $dado['outrosLanc'] : [$dado['outrosLanc']];
+
+        foreach ($outrosLancs as $outrosLanc) {
+            $outrosLanc['sfpadrao_id'] = $this->id;
+            $sfoutrosLanc = new Sfoutroslanc;
+            $sfoutrosLanc->createFromXml($outrosLanc);
+        }
+
+    }
+
+    private function createDespesaAnularFromXml(array $dado)
+    {
+        if (!isset($dado['despesaAnular'])) {
+            return;
+        }
+
+        $despesaAnulars = isset($dado['despesaAnular'][0]) ? $dado['despesaAnular'] : [$dado['despesaAnular']];
+
+        foreach ($despesaAnulars as $despesaAnular) {
+            $despesaAnular['sfpadrao_id'] = $this->id;
+            $sfdespesaAnular = new Sfdespesaanular;
+            $sfdespesaAnular->createFromXml($despesaAnular);
+        }
+
+    }
+
+    private function createCompensacaoFromXml(array $dado)
+    {
+        if (!isset($dado['compensacao'])) {
+            return;
+        }
+
+        $compensacaos = isset($dado['compensacao'][0]) ? $dado['compensacao'] : [$dado['compensacao']];
+
+        foreach ($compensacaos as $compensacao) {
+            $compensacao['sfpadrao_id'] = $this->id;
+            $sfcompensacao = new Sfcompensacao;
+            $sfcompensacao->createFromXml($compensacao);
+        }
+
+    }
+
+    private function createCentroCustoFromXml(array $dado)
+    {
+        if (!isset($dado['centroCusto'])) {
+            return;
+        }
+
+        $centroCustos = isset($dado['centroCusto'][0]) ? $dado['centroCusto'] : [$dado['centroCusto']];
+
+        foreach ($centroCustos as $centroCusto) {
+            $centroCusto['sfpadrao_id'] = $this->id;
+            $sfcentroCusto = new Sfcentrocusto;
+            $sfcentroCusto->createFromXml($centroCusto);
+        }
+
+    }
+
+    private function createDadosPagtoFromXml(array $dado)
+    {
+        if (!isset($dado['dadosPgto'])) {
+            return;
+        }
+
+        $dadosPgtos = isset($dado['dadosPgto'][0]) ? $dado['dadosPgto'] : [$dado['dadosPgto']];
+
+        foreach ($dadosPgtos as $dadosPgto) {
+            $dadosPgto['sfpadrao_id'] = $this->id;
+            $sfdadosPgto = new Sfdadospgto;
+            $sfdadosPgto->createFromXml($dadosPgto);
+        }
+
+    }
+
+    private function createDocContabilizacaoFromXml(array $dado)
+    {
+        if (!isset($dado['docContabilizacao'])) {
+            return;
+        }
+
+        $docContabilizacaos = isset($dado['docContabilizacao'][0]) ? $dado['docContabilizacao'] : [$dado['docContabilizacao']];
+
+        foreach ($docContabilizacaos as $docContabilizacao) {
+            $docContabilizacao['sfpadrao_id'] = $this->id;
+            $sfdocContabilizacao = new Sfdoccontabilizacao;
+            $sfdocContabilizacao->createFromXml($docContabilizacao);
         }
 
     }

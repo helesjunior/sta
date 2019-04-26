@@ -16,13 +16,13 @@ class CreateSfdespesaanularTable extends Migration
         Schema::create('sfdespesaanular', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('sfpadrao_id');
-            $table->bigInteger('numSeqItem');
-            $table->string('codSit');
-            $table->integer('codUgEmpe');
-            $table->string('txtInscrD');
-            $table->integer('numClassD');
-            $table->string('txtInscrE');
-            $table->integer('numClassE');
+            $table->bigInteger('numSeqItem')->nullable();
+            $table->string('codSit')->nullable();
+            $table->integer('codUgEmpe')->nullable();
+            $table->string('txtInscrD')->nullable();
+            $table->integer('numClassD')->nullable();
+            $table->string('txtInscrE')->nullable();
+            $table->integer('numClassE')->nullable();
             $table->timestamps();
         });
 

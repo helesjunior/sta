@@ -9,6 +9,7 @@ class Sfcredito extends Model
     protected $table = 'sfcredito';
 
     protected $fillable = [
+        'sfpadrao_id',
         'numSeqItem',
         'codSit',
         'indrLiquidado',
@@ -21,5 +22,13 @@ class Sfcredito extends Model
         'numClassB',
         'txtInscrC',
     ];
+
+    public function createFromXml(array $dado)
+    {
+        $this->fill($dado);
+        $this->save();
+
+        return $this;
+    }
 
 }

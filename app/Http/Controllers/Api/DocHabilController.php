@@ -9,6 +9,10 @@ use App\Http\Controllers\Controller;
 
 class DocHabilController extends Controller
 {
+    /**
+     * @return string
+     * @throws \Exception
+     */
     public function ler()
     {
         $path = config('app.path_pendentes');
@@ -34,7 +38,6 @@ class DocHabilController extends Controller
                 if ($zip->open($path.$arq1[0].'.zip') === TRUE) {
                     $zip->extractTo($path.'/'.$arq1[0]);
                     $zip->close();
-                } else {
                 }
             }
             if ($arq1[1] == 'xml') {
@@ -45,8 +48,9 @@ class DocHabilController extends Controller
 
         if (count($nomearquivo)) {
             foreach ($nomearquivo as $nome) {
-                if (substr($nome, 6, 4) == 'DDHU') {
+                if (substr($nome, 6, 3) == 'DDH') {
                     $dochabil = $this->lerArquivo($nome);
+                    echo $nome . '<br>';
                 }
 
             }
@@ -62,7 +66,7 @@ class DocHabilController extends Controller
     }
 
 
-    public function lerArquivo($nomeaquivo)
+    public function lerArquivo(string $nomeaquivo)
     {
         $path = config('app.path_pendentes');
         $path_processados = config('app.path_processados');
@@ -79,7 +83,6 @@ class DocHabilController extends Controller
         $json = json_encode($xml);
         $array = json_decode($json,TRUE);
 
-
         if(isset($array['ns2CprDhConsultar']))
         {
             $i = null;
@@ -88,20 +91,23 @@ class DocHabilController extends Controller
                     $i = $key;
                     $busca = new Sfpadrao;
                     $sfpadrao = $busca->createFromXml($dochabil);
-
-
-//                echo $dochabil->codUgEmit.''.$dochabil->anoDH.''.$dochabil->codTipoDH.''.$dochabil->numDH.'<br>';
                 }
             }catch (\Exception $exception){
 
-                throw $exception;
 //                echo "Erro Linha: ".$i;
+                throw $exception;
 
 //                die();
 
             }
 
         }
+
+//        if(copy($name.".zip",$namedestino.".LIDO.zip")){
+//            unlink($name);
+//            unlink($name.".zip");
+//        }
+
 
     }
 

@@ -15,7 +15,9 @@ class CreateSfrelsemitemvalorTable extends Migration
     {
         Schema::create('sfrelsemitemvalor', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->morphs('sfrelsemitemvalorable');
+            $table->nullableMorphs('sfrelsemitemvaloroutroslancable');
+            $table->nullableMorphs('sfrelsemitemvaloroutroslancpatrimonialable');
+            $table->nullableMorphs('sfrelsemitemvalorencargoable');
             $table->bigInteger('numSeqItem')->nullable();
             $table->integer('codNatDespDet')->nullable();
             $table->decimal('vlr',17,2)->nullable();

@@ -9,6 +9,7 @@ class Sfoutroslanc extends Model
     protected $table = 'sfoutroslanc';
 
     protected $fillable = [
+        'sfpadrao_id',
         'numSeqItem',
         'codSit',
         'indrLiquidado',
@@ -24,6 +25,32 @@ class Sfoutroslanc extends Model
         'numClassD',
         'tpNormalEstorno',
     ];
+
+
+    public function createFromXml(array $dado)
+    {
+
+        $this->fill($dado);
+        $this->save();
+
+        $this->createCronBaixaPatrimonialFromXml($dado);
+
+        return $this;
+    }
+
+    private function createCronBaixaPatrimonialFromXml(array $dado)
+    {
+        if (!isset($dado['cronBaixaPatrimonial'])) {
+            return;
+        }
+
+        $cronBaixaPatrimonial = $dado['cronBaixaPatrimonial'];
+
+        $cronBaixaPatrimonial['morph'] = $this;
+        $sfcronBaixaPatrimonial = new Sfcronbaixapatrimonial;
+        $sfcronBaixaPatrimonial->createFromXml($cronBaixaPatrimonial);
+
+    }
 
     public function cronBaixaPatrimonial()
     {

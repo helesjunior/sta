@@ -119,11 +119,13 @@ class Sfdeducao extends Model
         if (!isset($dado['relCredito'])) {
             return;
         }
-        $relCredito = $dado['relCredito'];
+        $relCreditos = isset($dado['relCredito'][0]) ? $dado['relCredito'] : [$dado['relCredito']];
 
-        $relCredito['morphcred'] = $this;
-        $sfrelCredito = new Sfrelsemitem;
-        $sfrelCredito->createFromXml($relCredito);
+        foreach ($relCreditos as $relCredito) {
+            $relCredito['morphcred'] = $this;
+            $sfrelCredito = new Sfrelsemitem;
+            $sfrelCredito->createFromXml($relCredito);
+        }
 
     }
 
