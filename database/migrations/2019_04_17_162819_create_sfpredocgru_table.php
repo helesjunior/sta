@@ -20,7 +20,7 @@ class CreateSfpredocgruTable extends Migration
             $table->string('numCodBarras')->nullable();
             $table->integer('codUgFavorecida')->nullable();
             $table->string('codRecolhedor')->nullable();
-            $table->integer('numReferencia')->nullable();
+            $table->bigInteger('numReferencia')->nullable();
             $table->integer('mesCompet')->nullable();
             $table->integer('anoCompet')->nullable();
             $table->string('txtProcesso')->nullable();

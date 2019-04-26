@@ -34,16 +34,12 @@ class Sfdeducao extends Model
         $this->fill($deducao);
         $this->save();
 
-
         $this->createItemRecolhimentoFromXml($deducao);
         $this->createPreDocFromXml($deducao);
-
-//        if (isset($deducao->predoc)) {
-//            foreach ($deducao->predoc as $predoc) {
-//                $sfpredoc = new SfpredocController;
-//                $modelPreDoc = $sfpredoc->inserirSfpreDocDeducao($predoc, $modelDeducao);
-//            }
-//        }
+        $this->createAcrescimoFromXml($deducao);
+        $this->createRelPcoItemFromXml($deducao);
+        $this->createRelPsoItemFromXml($deducao);
+        $this->createRelCreditoFromXml($deducao);
 
         return $this;
     }
@@ -79,6 +75,58 @@ class Sfdeducao extends Model
 
     }
 
+    private function createAcrescimoFromXml(array $dado)
+    {
+        if (!isset($dado['acrescimo'])) {
+            return;
+        }
+        $acrescimo = $dado['acrescimo'];
+
+        $acrescimo['morph'] = $this;
+        $sfacrescimo = new Sfacrescimo;
+        $sfacrescimo->createFromXml($acrescimo);
+
+    }
+
+    private function createRelPcoItemFromXml(array $dado)
+    {
+        if (!isset($dado['relPcoItem'])) {
+            return;
+        }
+        $relPcoItem = $dado['relPcoItem'];
+
+        $relPcoItem['morphpco'] = $this;
+        $sfrelPcoItem = new Sfrelcomitem;
+        $sfrelPcoItem->createFromXml($relPcoItem);
+
+    }
+
+    private function createRelPsoItemFromXml(array $dado)
+    {
+        if (!isset($dado['relPsoItem'])) {
+            return;
+        }
+        $relPsoItem = $dado['relPsoItem'];
+
+        $relPsoItem['morphpso'] = $this;
+        $sfrelPsoItem = new Sfrelcomitem;
+        $sfrelPsoItem->createFromXml($relPsoItem);
+
+    }
+
+    private function createRelCreditoFromXml(array $dado)
+    {
+        if (!isset($dado['relCredito'])) {
+            return;
+        }
+        $relCredito = $dado['relCredito'];
+
+        $relCredito['morphcred'] = $this;
+        $sfrelCredito = new Sfrelsemitem;
+        $sfrelCredito->createFromXml($relCredito);
+
+    }
+
 
     public function itemRecolhimento()
     {
@@ -97,16 +145,16 @@ class Sfdeducao extends Model
 
     public function relPcoItem()
     {
-        return $this->morphMany(Sfrelcomitem::class, 'sfrelcomitemable');
+        return $this->morphMany(Sfrelcomitem::class, 'sfrelcomitempcoable');
     }
 
     public function relPsoItem()
     {
-        return $this->morphMany(Sfrelcomitem::class, 'sfrelcomitemable');
+        return $this->morphMany(Sfrelcomitem::class, 'sfrelcomitempsoable');
     }
 
     public function relCredito()
     {
-        return $this->morphMany(Sfrelsemitem::class, 'sfrelsemitemable');
+        return $this->morphMany(Sfrelsemitem::class, 'sfrelsemitemcreditoable');
     }
 }

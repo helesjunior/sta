@@ -14,14 +14,33 @@ class Sfdomiciliobancario extends Model
         'conta'
     ];
 
-    public function numDomiBancFavoable()
+
+    public function createFromXML(array $domicilio)
     {
-        $this->morphTo();
+        $this->fill($domicilio);
+        if(isset($domicilio['morphfav'])){
+            $this->numdomibancfavoable()->associate($domicilio['morphfav']);
+        }
+
+        if(isset($domicilio['morphpgto'])){
+            $this->numdomibancpgtoable()->associate($domicilio['morphpgto']);
+        }
+
+        $this->save();
+
+
+        return $this;
     }
 
-    public function numDomiBancPgtoable()
+
+    public function numdomibancfavoable()
     {
-        $this->morphTo();
+        return $this->morphTo();
+    }
+
+    public function numdomibancpgtoable()
+    {
+        return $this->morphTo();
     }
 
 }

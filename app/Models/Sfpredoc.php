@@ -21,8 +21,39 @@ class Sfpredoc extends Model
 
 
         $this->createPredocDarfFromXml($predoc);
+        $this->createPredocObFromXml($predoc);
+        $this->createPredocNsFromXml($predoc);
+        $this->createPredocDarFromXml($predoc);
+        $this->createPredocGfipFromXml($predoc);
+        $this->createPredocGpsFromXml($predoc);
+        $this->createPredocGruFromXml($predoc);
+        $this->createPredocPfFromXml($predoc);
 
         return $this;
+    }
+
+    private function createPredocObFromXml(array $dado)
+    {
+        if (!isset($dado['predocOB'])) {
+            return;
+        }
+        $predocOB = $dado['predocOB'];
+
+        $predocOB['sfpredoc_id'] = $this->id;
+        $sfpredocob = new Sfpredocob;
+        $sfpredocob->createFromXml($predocOB);
+    }
+
+    private function createPredocNsFromXml(array $dado)
+    {
+        if (!isset($dado['predocNS'])) {
+            return;
+        }
+        $predocNS = $dado['predocNS'];
+
+        $predocNS['sfpredoc_id'] = $this->id;
+        $sfpredocns = new Sfpredocns;
+        $sfpredocns->createFromXml($predocNS);
     }
 
     private function createPredocDarfFromXml(array $dado)
@@ -35,6 +66,66 @@ class Sfpredoc extends Model
         $predocDARF['sfpredoc_id'] = $this->id;
         $sfpredocdarf = new Sfpredocdarf;
         $sfpredocdarf->createFromXml($predocDARF);
+    }
+
+    private function createPredocDarFromXml(array $dado)
+    {
+        if (!isset($dado['predocDAR'])) {
+            return;
+        }
+        $predocDAR = $dado['predocDAR'];
+
+        $predocDAR['sfpredoc_id'] = $this->id;
+        $sfpredocdar = new Sfpredocdar;
+        $sfpredocdar->createFromXml($predocDAR);
+    }
+
+    private function createPredocGfipFromXml(array $dado)
+    {
+        if (!isset($dado['predocGFIP'])) {
+            return;
+        }
+        $predocGFIP = $dado['predocGFIP'];
+
+        $predocGFIP['sfpredoc_id'] = $this->id;
+        $sfpredocgfip = new Sfpredocgfip;
+        $sfpredocgfip->createFromXml($predocGFIP);
+    }
+
+    private function createPredocGpsFromXml(array $dado)
+    {
+        if (!isset($dado['predocGPS'])) {
+            return;
+        }
+        $predocGPS = $dado['predocGPS'];
+
+        $predocGPS['sfpredoc_id'] = $this->id;
+        $sfpredocgps = new Sfpredocgps;
+        $sfpredocgps->createFromXml($predocGPS);
+    }
+
+    private function createPredocGruFromXml(array $dado)
+    {
+        if (!isset($dado['predocGRU'])) {
+            return;
+        }
+        $predocGRU = $dado['predocGRU'];
+
+        $predocGRU['sfpredoc_id'] = $this->id;
+        $sfpredocgru = new Sfpredocgru;
+        $sfpredocgru->createFromXml($predocGRU);
+    }
+
+    private function createPredocPfFromXml(array $dado)
+    {
+        if (!isset($dado['predocPF'])) {
+            return;
+        }
+        $predocPF = $dado['predocPF'];
+
+        $predocPF['sfpredoc_id'] = $this->id;
+        $sfpredocpf = new Sfpredocpf;
+        $sfpredocpf->createFromXml($predocPF);
     }
 
 

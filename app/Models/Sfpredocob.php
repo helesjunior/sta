@@ -9,6 +9,7 @@ class Sfpredocob extends Model
     protected $table = 'sfpredocob';
 
     protected $fillable = [
+        'sfpredoc_id',
         'codTipoOB',
         'codCredorDevedor',
         'codNumLista',
@@ -27,13 +28,51 @@ class Sfpredocob extends Model
         'codDevolucaoSPB',
     ];
 
-    public function numDomiBancFavo()
+    public function createFromXML(array $predocob)
     {
-        return $this->morphOne(Sfdomiciliobancario::class, 'numDomiBancFavoable');
+        $this->fill($predocob);
+        $this->save();
+
+        $this->createnumDomiBancFavoFromXml($predocob);
+        $this->createnumDomiBancPgtoFromXml($predocob);
+
+        return $this;
     }
 
-    public function numDomiBancPgto()
+    private function createnumDomiBancFavoFromXml(array $dado)
     {
-        return $this->morphOne(Sfdomiciliobancario::class, 'numDomiBancPgtoable');
+        if (!isset($dado['numDomiBancFavo'])) {
+            return;
+        }
+        $domiciliobancario = $dado['numDomiBancFavo'];
+
+        $domiciliobancario['morphfav'] = $this;
+        $sfdomicilio = new Sfdomiciliobancario;
+        $sfdomicilio->createFromXml($domiciliobancario);
+
+    }
+
+    private function createnumDomiBancPgtoFromXml(array $dado)
+    {
+        if (!isset($dado['numDomiBancPgto'])) {
+            return;
+        }
+        $domiciliobancario = $dado['numDomiBancPgto'];
+
+        $domiciliobancario['morphpgto'] = $this;
+        $sfdomicilio = new Sfdomiciliobancario;
+        $sfdomicilio->createFromXml($domiciliobancario);
+
+    }
+
+
+    public function numdomibancfavo()
+    {
+        return $this->morphOne(Sfdomiciliobancario::class, 'numdomibancfavoable');
+    }
+
+    public function numdomibancpgto()
+    {
+        return $this->morphOne(Sfdomiciliobancario::class, 'numdomibancpgtoable');
     }
 }

@@ -9,6 +9,7 @@ class Sfpcoitem extends Model
     protected $table = 'sfpcoitem';
 
     protected $fillable = [
+        'sfpco_id',
         'numSeqItem',
         'numEmpe',
         'codSubItemEmpe',
@@ -21,5 +22,11 @@ class Sfpcoitem extends Model
         'txtInscrC',
         'numClassC'
     ];
+
+    public function createFromXml(array $dado)
+    {
+        $this->fill($dado);
+        $this->save();
+    }
 
 }

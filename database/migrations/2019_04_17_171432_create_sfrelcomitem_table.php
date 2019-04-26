@@ -15,7 +15,8 @@ class CreateSfrelcomitemTable extends Migration
     {
         Schema::create('sfrelcomitem', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->morphs('sfrelcomitemable');
+            $table->nullableMorphs('sfrelcomitempcoable');
+            $table->nullableMorphs('sfrelcomitempsoable');
             $table->bigInteger('numSeqPai')->nullable();
             $table->bigInteger('numSeqItem')->nullable();
             $table->timestamps();

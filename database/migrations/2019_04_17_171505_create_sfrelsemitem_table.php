@@ -15,7 +15,9 @@ class CreateSfrelsemitemTable extends Migration
     {
         Schema::create('sfrelsemitem', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->morphs('sfrelsemitemable');
+            $table->nullableMorphs('sfrelsemitemcreditoable');
+            $table->nullableMorphs('sfrelsemitemencargoable');
+            $table->nullableMorphs('sfrelsemitemdeducaoable');
             $table->bigInteger('numSeqItem')->nullable();
             $table->timestamps();
         });

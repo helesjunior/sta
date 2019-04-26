@@ -19,41 +19,21 @@ class Sfpadrao extends Model
     public function createFromXml(array $dado)
     {
 
-        try{
+        try {
             \DB::beginTransaction();
 
             $this->fill($dado);
             $this->save();
 
+            $this->createDadosBasicosFromXml($dado);
+            $this->createPcoFromXml($dado);
+            $this->createPsoFromXml($dado);
             $this->createDeducaoFromXml($dado);
+            $this->createEncargoFromXml($dado);
 
-//        if (isset($dado->dadosBasicos)) {
-//            $sfdadosbasicos = new SfdadosbasicosController;
-//            $sfpadrao = $sfdadosbasicos->inserirSfdadosBasicos($dado,$sfpadrao);
-//        }
-//
-//        if (isset($dado->pco)) {
-//            $sfpco = new SfpcoController;
-//            $sfpadrao = $sfpco->inserirSfpco($dado,$sfpadrao);
-//        }
-//
-//        if (isset($dado->pso)) {
-//            $sfpso = new SfpsoController;
-//            $sfpadrao = $sfpso->inserirSfpso($dado,$sfpadrao);
-//        }
-//
-//        if (isset($dado->credito)) {
-//            $sfcredito = new SfcreditoController;
-//            $sfpadrao = $sfcredito->inserirSfcredito($dado,$sfpadrao);
-//        }
-//
-//        if (isset($dado->outrosLanc)) {
-//            $sfoutroslanc = new SfoutroslancController;
-//            $sfpadrao = $sfoutroslanc->inserirSfoutrosLanc($dado,$sfpadrao);
-//        }
-//
+
             \DB::commit();
-        }catch (\Exception $exception){
+        } catch (\Exception $exception) {
             \DB::rollBack();
             throw $exception;
         }
@@ -62,6 +42,19 @@ class Sfpadrao extends Model
         return $this;
     }
 
+    private function createDadosBasicosFromXml(array $dado)
+    {
+        if (!isset($dado['dadosBasicos'])) {
+            return;
+        }
+
+        $dadosbasicos = $dado['dadosBasicos'];
+
+        $dadosbasicos['sfpadrao_id'] = $this->id;
+        $sfdadosbasicos = new Sfdadosbasicos;
+        $sfdadosbasicos->createFromXml($dadosbasicos);
+
+    }
 
     private function createDeducaoFromXml(array $dado)
     {
@@ -75,6 +68,54 @@ class Sfpadrao extends Model
             $deducao['sfpadrao_id'] = $this->id;
             $sfdeducao = new Sfdeducao;
             $sfdeducao->createFromXml($deducao);
+        }
+
+    }
+
+    private function createEncargoFromXml(array $dado)
+    {
+        if (!isset($dado['encargo'])) {
+            return;
+        }
+
+        $encargos = isset($dado['encargo'][0]) ? $dado['encargo'] : [$dado['encargo']];
+
+        foreach ($encargos as $encargo) {
+            $encargo['sfpadrao_id'] = $this->id;
+            $sfencargo = new Sfencargo;
+            $sfencargo->createFromXml($encargo);
+        }
+
+    }
+
+    private function createPcoFromXml(array $dado)
+    {
+        if (!isset($dado['pco'])) {
+            return;
+        }
+
+        $pcos = isset($dado['pco'][0]) ? $dado['pco'] : [$dado['pco']];
+
+        foreach ($pcos as $pco) {
+            $pco['sfpadrao_id'] = $this->id;
+            $sfpco = new Sfpco;
+            $sfpco->createFromXml($pco);
+        }
+
+    }
+
+    private function createPsoFromXml(array $dado)
+    {
+        if (!isset($dado['pso'])) {
+            return;
+        }
+
+        $psos = isset($dado['pso'][0]) ? $dado['pso'] : [$dado['pso']];
+
+        foreach ($psos as $pso) {
+            $pso['sfpadrao_id'] = $this->id;
+            $sfpso = new Sfpso;
+            $sfpso->createFromXml($pso);
         }
 
     }

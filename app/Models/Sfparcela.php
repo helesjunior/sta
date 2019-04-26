@@ -9,8 +9,17 @@ class Sfparcela extends Model
     protected $table = 'sfparcela';
 
     protected $fillable = [
+        'sfcronbaixapatrimonial_id',
         'numParcela',
         'dtPrevista',
         'vlr',
     ];
+
+    public function createFromXML(array $parcela)
+    {
+        $this->fill($parcela);
+        $this->save();
+
+        return $this;
+    }
 }

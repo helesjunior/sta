@@ -45,7 +45,7 @@ class DocHabilController extends Controller
 
         if (count($nomearquivo)) {
             foreach ($nomearquivo as $nome) {
-                if (substr($nome, 6, 4) == 'DDHD') {
+                if (substr($nome, 6, 4) == 'DDHU') {
                     $dochabil = $this->lerArquivo($nome);
                 }
 
@@ -94,9 +94,10 @@ class DocHabilController extends Controller
                 }
             }catch (\Exception $exception){
 
-                echo "Erro Linha: ".$i;
+                throw $exception;
+//                echo "Erro Linha: ".$i;
 
-                die();
+//                die();
 
             }
 

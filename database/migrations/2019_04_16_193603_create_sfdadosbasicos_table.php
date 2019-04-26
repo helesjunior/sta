@@ -21,11 +21,11 @@ class CreateSfdadosbasicosTable extends Migration
             $table->integer('codUgPgto')->nullable();
             $table->decimal('vlr',17,2)->nullable();
             $table->text('txtObser')->nullable();
-            $table->string('txtInfoAdic')->nullable();
+            $table->text('txtInfoAdic')->nullable();
             $table->decimal('vlrTaxaCambio',17,2)->nullable();
             $table->string('txtProcesso')->nullable();
             $table->date('dtAteste')->nullable();
-            $table->string('codCredorDevedor');
+            $table->string('codCredorDevedor')->nullable();
             $table->date('dtPgtoReceb')->nullable();
             $table->timestamps();
         });
