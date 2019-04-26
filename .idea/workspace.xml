@@ -1,58 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5f7bbf1-8681-41d7-955f-e279d69fe13c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdeducaoController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfitemrecolhimentoController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocobController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfacrescimoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfacrescimoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfcentrocustoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfcentrocustoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfcompensacaoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfcompensacaoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfcreditoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfcreditoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfcronbaixapatrimonialController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfcronbaixapatrimonialController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdadosbasicosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdadosbasicosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdadospgtoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdadospgtoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdeducaoController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdespesaanularController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdespesaanularController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdespesaanularitemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdespesaanularitemController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdoccontabilizacaoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdoccontabilizacaoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdocorigemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdocorigemController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdocrelacionadoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdocrelacionadoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfdomiciliobancarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdomiciliobancarioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfencargoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfencargoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfitemrecolhimentoController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfoutroslancController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfoutroslancController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpadraoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpadraoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfparcelaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfparcelaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpcoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpcoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpcoitemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpcoitemController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocdarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocdarController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocdarfController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocdarfController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocgfipController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocgfipController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocgpsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocgpsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocgruController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocgruController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocnsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocnsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocobController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpredocpfController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpredocpfController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpsoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpsoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfpsoitemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpsoitemController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfrelcomitemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfrelcomitemController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfrelcomitemvalorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfrelcomitemvalorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfrelsemitemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfrelsemitemController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SfrelsemitemvalorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfrelsemitemvalorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Siafi/SftramiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_Siafi/SftramiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfdeducao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfdeducao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfitemrecolhimento.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfitemrecolhimento.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfpadrao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfpadrao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfpredoc.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfpredoc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfpredocdarf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfpredocdarf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-    </list>
+    <list default="true" id="f5f7bbf1-8681-41d7-955f-e279d69fe13c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,8 +91,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="669">
-              <caret line="96" column="19" lean-forward="true" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
+            <state relative-caret-position="741">
+              <caret line="100" column="13" lean-forward="true" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
               <folding>
                 <element signature="e#44#94#0#PHP" expanded="true" />
               </folding>
@@ -453,12 +402,12 @@
       <workItem from="1555627685714" duration="716000" />
       <workItem from="1555959365109" duration="6376000" />
       <workItem from="1556188787181" duration="7704000" />
-      <workItem from="1556213507050" duration="9555000" />
+      <workItem from="1556213507050" duration="10189000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162891000" />
+    <option name="totallyTimeSpent" value="163525000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
@@ -869,8 +818,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="669">
-          <caret line="96" column="19" lean-forward="true" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
+        <state relative-caret-position="741">
+          <caret line="100" column="13" lean-forward="true" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
           <folding>
             <element signature="e#44#94#0#PHP" expanded="true" />
           </folding>
