@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5f7bbf1-8681-41d7-955f-e279d69fe13c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfcentrocusto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfcentrocusto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfcompensacao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfcompensacao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfcredito.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfcredito.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfdadospgto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfdadospgto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfdeducao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfdeducao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfdespesaanular.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfdespesaanular.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfdespesaanularitem.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfdespesaanularitem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfdoccontabilizacao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfdoccontabilizacao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfoutroslanc.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfoutroslanc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfpadrao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfpadrao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfrelcomitemvalor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfrelcomitemvalor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfrelsemitemvalor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfrelsemitemvalor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_17_170604_create_sfdespesaanular_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_17_170604_create_sfdespesaanular_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_17_171444_create_sfrelcomitemvalor_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_17_171444_create_sfrelcomitemvalor_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_17_171517_create_sfrelsemitemvalor_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_17_171517_create_sfrelsemitemvalor_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_17_172313_create_sfcentrocusto_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_17_172313_create_sfcentrocusto_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_17_172722_create_sfdoccontabilizacao_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_17_172722_create_sfdoccontabilizacao_table.php" afterDir="false" />
-    </list>
+    <list default="true" id="f5f7bbf1-8681-41d7-955f-e279d69fe13c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -364,12 +344,12 @@
       <workItem from="1555959365109" duration="6376000" />
       <workItem from="1556188787181" duration="7704000" />
       <workItem from="1556213507050" duration="10189000" />
-      <workItem from="1556272203556" duration="21105000" />
+      <workItem from="1556272203556" duration="21138000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184630000" />
+    <option name="totallyTimeSpent" value="184663000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
