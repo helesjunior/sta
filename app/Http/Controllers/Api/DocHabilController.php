@@ -80,17 +80,18 @@ class DocHabilController extends Controller
         }
 
         $xml = simplexml_load_string(str_replace(':','',$myfile));
-        $json = json_encode($xml);
-        $array = json_decode($json,TRUE);
 
-        if(isset($array['ns2CprDhConsultar']))
+
+        if(isset($xml->ns2CprDhConsultar))
         {
             $i = null;
             try{
-                foreach($array['ns2CprDhConsultar'] as $key => $dochabil){
+                foreach($xml->ns2CprDhConsultar as $key => $dochabil){
                     $i = $key;
+                    $json = json_encode($dochabil);
+                    $array = json_decode($json,TRUE);
                     $busca = new Sfpadrao;
-                    $sfpadrao = $busca->createFromXml($dochabil);
+                    $sfpadrao = $busca->createFromXml($array);
                 }
             }catch (\Exception $exception){
 
@@ -111,11 +112,4 @@ class DocHabilController extends Controller
 
     }
 
-    public function xml2array ( $xmlObject, $out = array () )
-    {
-        foreach ( (array) $xmlObject as $index => $node )
-            $out[$index] = ( is_object ( $node ) ) ? $this->xml2array($node) : $node;
-
-        return $out;
-    }
 }
