@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5f7bbf1-8681-41d7-955f-e279d69fe13c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfpadrao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfpadrao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_16_200530_create_sfoutroslanc_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_16_200530_create_sfoutroslanc_table.php" afterDir="false" />
-    </list>
+    <list default="true" id="f5f7bbf1-8681-41d7-955f-e279d69fe13c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,38 +12,7 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Models/Sfpadrao.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="172" column="39" lean-forward="true" selection-start-line="172" selection-start-column="39" selection-end-line="172" selection-end-column="39" />
-              <folding>
-                <element signature="e#30#69#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_200530_create_sfoutroslanc_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="98" lean-forward="true" selection-start-line="36" selection-start-column="98" selection-end-line="36" selection-end-column="98" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_200529_create_sfcredito_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="34" column="11" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="34" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -236,28 +201,6 @@
               <item name="sta" type="b2602c69:ProjectViewProjectNode" />
               <item name="sta" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="sta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sta" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sta" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sta" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sta" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -331,16 +274,15 @@
       <workItem from="1556213507050" duration="10189000" />
       <workItem from="1556272203556" duration="21138000" />
       <workItem from="1556537033741" duration="1240000" />
-      <workItem from="1556625255881" duration="11958000" />
+      <workItem from="1556625255881" duration="11990000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197861000" />
+    <option name="totallyTimeSpent" value="197893000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25373134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -711,10 +653,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_200529_create_sfcredito_table.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfpadrao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="34" column="11" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="34" selection-end-column="11" />
+        <state relative-caret-position="3096">
+          <caret line="172" column="39" lean-forward="true" selection-start-line="172" selection-start-column="39" selection-end-line="172" selection-end-column="39" />
+          <folding>
+            <element signature="e#30#69#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -725,13 +670,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfpadrao.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_200529_create_sfcredito_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="172" column="39" lean-forward="true" selection-start-line="172" selection-start-column="39" selection-end-line="172" selection-end-column="39" />
-          <folding>
-            <element signature="e#30#69#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="576">
+          <caret line="34" column="11" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="34" selection-end-column="11" />
         </state>
       </provider>
     </entry>
