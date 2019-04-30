@@ -58,6 +58,20 @@ class Sfcompensacao extends Model
 
     }
 
+    public function deleterelDeducaoItem($dado){
+        foreach ($dado->relDeducaoItem as $relDeducaoItem){
+            $relDeducaoItem->delete();
+        }
+    }
+
+    public function deleterelEncargoItem($dado){
+        foreach ($dado->relEncargoItem as $relEncargoItem){
+            $relEncargoItem->delete();
+        }
+    }
+
+
+
     public function relDeducaoItem()
     {
         return $this->morphMany(Sfrelsemitem::class, 'sfrelsemitemable');

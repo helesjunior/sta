@@ -65,6 +65,17 @@ class Sfpredocob extends Model
 
     }
 
+    public function deleteDomicilioBancarioFav($dado){
+        if(isset($dado->numdomibancfavo)){
+            $dado->numdomibancfavo->delete();
+        }
+    }
+
+    public function deleteDomicilioBancarioPgto($dado){
+        if(isset($dado->numdomibancpgto)){
+            $dado->numdomibancpgto->delete();
+        }
+    }
 
     public function numdomibancfavo()
     {

@@ -35,6 +35,13 @@ class Sfcronbaixapatrimonial extends Model
 
     }
 
+    public function deleteParcela($dado){
+        foreach ($dado->parcela as $parcela){
+            $parcela->delete();
+        }
+    }
+
+
     public function sfcronbaixapatrimonialable()
     {
         return $this->morphTo();

@@ -29,6 +29,7 @@ class Sfdeducao extends Model
     ];
 
 
+
     public function createFromXml(array $deducao)
     {
         $this->fill($deducao);
@@ -60,7 +61,6 @@ class Sfdeducao extends Model
         }
 
     }
-
 
     private function createPreDocFromXml(array $dado)
     {
@@ -129,6 +129,52 @@ class Sfdeducao extends Model
 
     }
 
+    public function deleteAcrescimo($dado){
+        foreach ($dado->acrescimo as $acrescimo){
+            $acrescimo->delete();
+        }
+    }
+
+    public function deleterelPcoItem($dado){
+        foreach ($dado->relPcoItem as $relPcoItem){
+            $relPcoItem->delete();
+        }
+    }
+
+    public function deleterelPsoItem($dado){
+        foreach ($dado->relPsoItem as $relPsoItem){
+            $relPsoItem->delete();
+        }
+    }
+
+    public function deleterelCredito($dado){
+        foreach ($dado->relCredito as $relCredito){
+            $relCredito->delete();
+        }
+    }
+
+    public function deleteItemRecolhimento($dado){
+        foreach ($dado->itemRecolhimento as $itemrecolhimento){
+            $itemrecolhimento->delete();
+        }
+    }
+
+    public function deletepredoc($dado){
+
+        if(isset($dado->predoc->predocOB)){
+            $predocob = new Sfpredocob();
+            $predocob->deleteDomicilioBancarioFav($dado->predoc->predocOB);
+            $predocob->deleteDomicilioBancarioPgto($dado->predoc->predocOB);
+        }
+
+        if(isset($dado->predoc->predocNS)){
+            $predocns = new Sfpredocns();
+            $predocns->deleteDomicilioBancarioPgto($dado->predoc->predocNS);
+        }
+
+        $dado->predoc()->delete();
+
+    }
 
     public function itemRecolhimento()
     {

@@ -70,6 +70,37 @@ class Sfdadospgto extends Model
 
     }
 
+
+    public function deleteAcrescimo($dado){
+        foreach ($dado->acrescimo as $acrescimo){
+            $acrescimo->delete();
+        }
+    }
+
+    public function deleteItemRecolhimento($dado){
+        foreach ($dado->itemRecolhimento as $itemrecolhimento){
+            $itemrecolhimento->delete();
+        }
+    }
+
+    public function deletepredoc($dado){
+
+        if(isset($dado->predoc->predocOB)){
+            $predocob = new Sfpredocob();
+            $predocob->deleteDomicilioBancarioFav($dado->predoc->predocOB);
+            $predocob->deleteDomicilioBancarioPgto($dado->predoc->predocOB);
+        }
+
+        if(isset($dado->predoc->predocNS)){
+            $predocns = new Sfpredocns();
+            $predocns->deleteDomicilioBancarioPgto($dado->predoc->predocNS);
+        }
+
+        $dado->predoc()->delete();
+
+    }
+
+
     public function itemRecolhimento()
     {
         return $this->morphMany(Sfitemrecolhimento::class, 'sfitemrecolhimentoable');

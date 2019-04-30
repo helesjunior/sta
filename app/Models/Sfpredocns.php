@@ -38,9 +38,15 @@ class Sfpredocns extends Model
 
     }
 
+    public function deleteDomicilioBancarioPgto($dado){
+        if(isset($dado->numdomibancpgto)){
+            $dado->numdomibancpgto->delete();
+        }
+    }
+
 
     public function numdomibancpgto()
     {
-        return $this->morphOne(Sfdomiciliobancario::class, 'numgomibancpgtoable');
+        return $this->morphOne(Sfdomiciliobancario::class, 'numdomibancpgtoable');
     }
 }

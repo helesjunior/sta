@@ -191,6 +191,77 @@ class Sfcentrocusto extends Model
     }
 
 
+    public function deleterelPcoItem($dado)
+    {
+        foreach ($dado->relPcoItem as $relPcoItem) {
+            $relPcoItem->delete();
+        }
+    }
+
+    public function deleterelOutrosLanc($dado)
+    {
+        foreach ($dado->relOutrosLanc as $relOutrosLanc) {
+            $relOutrosLanc->delete();
+        }
+    }
+
+    public function deleterelOutrosLancCronogramaPatrimonial($dado)
+    {
+        foreach ($dado->relOutrosLancCronogramaPatrimonial as $relOutrosLancCronogramaPatrimonial) {
+            $relOutrosLancCronogramaPatrimonial->delete();
+        }
+    }
+
+    public function deleterelPsoItem($dado)
+    {
+        foreach ($dado->relPsoItem as $relPsoItem) {
+            $relPsoItem->delete();
+        }
+    }
+
+    public function deleterelEncargo($dado)
+    {
+        foreach ($dado->relEncargo as $relEncargo) {
+            $relEncargo->delete();
+        }
+    }
+
+    public function deleterelAcrescimoDeducao($dado)
+    {
+        foreach ($dado->relAcrescimoDeducao as $relAcrescimoDeducao) {
+            $relAcrescimoDeducao->delete();
+        }
+    }
+
+    public function deleterelAcrescimoEncargo($dado)
+    {
+        foreach ($dado->relAcrescimoEncargo as $relAcrescimoEncargo) {
+            $relAcrescimoEncargo->delete();
+        }
+    }
+
+    public function deleterelAcrescimoDadosPag($dado)
+    {
+        foreach ($dado->relAcrescimoDadosPag as $relAcrescimoDadosPag) {
+            $relAcrescimoDadosPag->delete();
+        }
+    }
+
+    public function deleterelDespesaAntecipada($dado)
+    {
+        foreach ($dado->relDespesaAntecipada as $relDespesaAntecipada) {
+            $relDespesaAntecipada->delete();
+        }
+    }
+
+    public function deleterelDespesaAnular($dado)
+    {
+        foreach ($dado->relDespesaAnular as $relDespesaAnular) {
+            $relDespesaAnular->delete();
+        }
+    }
+
+
     public function relPcoItem()
     {
         return $this->morphMany(Sfrelcomitemvalor::class, 'sfrelcomitemvalorpcoable');

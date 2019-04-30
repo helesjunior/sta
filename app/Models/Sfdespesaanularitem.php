@@ -47,6 +47,12 @@ class Sfdespesaanularitem extends Model
 
     }
 
+    public function deleterelEncargo($dado){
+        foreach ($dado->relEncargo as $relEncargo){
+            $relEncargo->delete();
+        }
+    }
+
     public function relEncargo()
     {
         return $this->morphMany(Sfrelsemitem::class, 'sfrelsemitemable');

@@ -16,12 +16,155 @@ class Sfpadrao extends Model
         'numDH',
     ];
 
+    public static function boot()
+    {
+        parent::boot();
+
+        static::deleting(function ($sfpadrao) {
+            if (isset($sfpadrao->deducao)) {
+                foreach ($sfpadrao->deducao as $deducao) {
+                    $sfdeducao = new Sfdeducao();
+                    if (isset($deducao->itemRecolhimento)) {
+                        $sfdeducao->deleteItemRecolhimento($deducao);
+                    }
+                    if (isset($deducao->predoc)) {
+                        $sfdeducao->deletepredoc($deducao);
+                    }
+                    if (isset($deducao->relPcoItem)) {
+                        $sfdeducao->deleterelPcoItem($deducao);
+                    }
+                    if (isset($deducao->relPsoItem)) {
+                        $sfdeducao->deleterelPsoItem($deducao);
+                    }
+                    if (isset($deducao->relCredito)) {
+                        $sfdeducao->deleterelCredito($deducao);
+                    }
+                    if (isset($deducao->acrescimo)) {
+                        $sfdeducao->deleteAcrescimo($deducao);
+                    }
+                }
+            }
+
+            if (isset($sfpadrao->pco)) {
+                foreach ($sfpadrao->pco as $pco) {
+                    if (isset($pco->cronBaixaPatrimonial)) {
+                        $sfcronBaixaPatrimonial = new Sfcronbaixapatrimonial();
+                        $sfcronBaixaPatrimonial->deleteParcela($pco->cronBaixaPatrimonial);
+                    }
+                }
+            }
+
+            if (isset($sfpadrao->outrosLanc)) {
+                foreach ($sfpadrao->outrosLanc as $outrosLanc) {
+                    if (isset($outrosLanc->cronBaixaPatrimonial)) {
+                        $sfcronBaixaPatrimonial = new Sfcronbaixapatrimonial();
+                        $sfcronBaixaPatrimonial->deleteParcela($outrosLanc->cronBaixaPatrimonial);
+                    }
+                }
+            }
+
+            if (isset($sfpadrao->encargo)) {
+                foreach ($sfpadrao->encargo as $encargo) {
+                    $sfencargo = new Sfencargo();
+                    if (isset($encargo->itemRecolhimento)) {
+                        $sfencargo->deleteItemRecolhimento($encargo);
+                    }
+                    if (isset($encargo->predoc)) {
+                        $sfencargo->deletepredoc($encargo);
+                    }
+                    if (isset($encargo->acrescimo)) {
+                        $sfencargo->deleteAcrescimo($encargo);
+                    }
+                }
+            }
+
+            if (isset($sfpadrao->dadosPgto)) {
+                foreach ($sfpadrao->dadosPgto as $dadosPgto) {
+                    $sfdadosPgto = new Sfdadospgto();
+                    if (isset($dadosPgto->itemRecolhimento)) {
+                        $sfdadosPgto->deleteItemRecolhimento($dadosPgto);
+                    }
+                    if (isset($dadosPgto->predoc)) {
+                        $sfdadosPgto->deletepredoc($dadosPgto);
+                    }
+                    if (isset($dadosPgto->acrescimo)) {
+                        $sfdadosPgto->deleteAcrescimo($dadosPgto);
+                    }
+                }
+            }
+
+            if (isset($sfpadrao->despesaAnular)) {
+                foreach ($sfpadrao->despesaAnular as $despesaAnular) {
+                    if (isset($despesaAnular->despesaAnularItem)) {
+                        foreach ($despesaAnular->despesaAnularItem as $despesaAnularItem) {
+                            if (isset($despesaAnularItem->relEncargo)) {
+                                $sfdespesaanularitem = new Sfdespesaanularitem();
+                                $sfdespesaanularitem->deleterelEncargo($despesaAnularItem);
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            if (isset($sfpadrao->compensacao)) {
+                foreach ($sfpadrao->compensacao as $compensacao) {
+                    $sfcompensacao = new Sfcompensacao();
+                    if (isset($despesaAnular->relDeducaoItem)) {
+                        $sfcompensacao->deleterelDeducaoItem($compensacao);
+                    }
+                    if (isset($despesaAnular->relEncargoItem)) {
+                        $sfcompensacao->deleterelEncargoItem($compensacao);
+                    }
+                }
+            }
+
+            if (isset($sfpadrao->centroCusto)) {
+                foreach ($sfpadrao->centroCusto as $centroCusto) {
+                    $sfcentroCusto = new Sfcentrocusto();
+                    if (isset($centroCusto->relPcoItem)) {
+                        $sfcentroCusto->deleterelPcoItem($centroCusto);
+                    }
+                    if (isset($centroCusto->relOutrosLanc)) {
+                        $sfcentroCusto->deleterelOutrosLanc($centroCusto);
+                    }
+                    if (isset($centroCusto->relOutrosLancCronogramaPatrimonial)) {
+                        $sfcentroCusto->deleterelOutrosLancCronogramaPatrimonial($centroCusto);
+                    }
+                    if (isset($centroCusto->relPsoItem)) {
+                        $sfcentroCusto->deleterelPsoItem($centroCusto);
+                    }
+                    if (isset($centroCusto->relEncargo)) {
+                        $sfcentroCusto->deleterelEncargo($centroCusto);
+                    }
+                    if (isset($centroCusto->relAcrescimoDeducao)) {
+                        $sfcentroCusto->deleterelAcrescimoDeducao($centroCusto);
+                    }
+                    if (isset($centroCusto->relAcrescimoEncargo)) {
+                        $sfcentroCusto->deleterelAcrescimoEncargo($centroCusto);
+                    }
+                    if (isset($centroCusto->relAcrescimoDadosPag)) {
+                        $sfcentroCusto->deleterelAcrescimoDadosPag($centroCusto);
+                    }
+                    if (isset($centroCusto->relDespesaAntecipada)) {
+                        $sfcentroCusto->deleterelDespesaAntecipada($centroCusto);
+                    }
+
+                    if (isset($centroCusto->relDespesaAnular)) {
+                        $sfcentroCusto->deleterelDespesaAnular($centroCusto);
+                    }
+
+                }
+            }
+
+
+        });
+
+    }
+
     public function createFromXml(array $dado)
     {
-        if($this->buscaSfpadrao($dado)){
-
-            return;
-        }
+        $this->buscaSfpadrao($dado);
 
         $this->fill($dado);
         $this->save();
@@ -54,21 +197,17 @@ class Sfpadrao extends Model
 
     private function buscaSfpadrao($dado)
     {
-        $retorno = false;
-
         $sfpadrao = $this->where('codUgEmit', $dado['codUgEmit'])
             ->where('anoDH', $dado['anoDH'])
             ->where('codTipoDH', $dado['codTipoDH'])
             ->where('numDH', $dado['numDH'])
             ->first();
 
-        if(count($sfpadrao)){
-            $retorno = true;
+        if (count($sfpadrao)) {
+            $sfpadrao->delete();
         }
-
-        return $retorno;
     }
-    
+
     private function createDadosBasicosFromXml(array $dado)
     {
         if (!isset($dado['dadosBasicos'])) {

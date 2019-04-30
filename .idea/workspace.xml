@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5f7bbf1-8681-41d7-955f-e279d69fe13c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Sfcentrocusto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfcentrocusto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Sfcompensacao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfcompensacao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Sfcronbaixapatrimonial.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfcronbaixapatrimonial.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Sfdadospgto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfdadospgto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Sfdeducao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfdeducao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Sfdespesaanularitem.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfdespesaanularitem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Sfencargo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfencargo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Sfpadrao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfpadrao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Sfpredocns.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfpredocns.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Sfpredocob.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfpredocob.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +24,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/app.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Sfpadrao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+            <state relative-caret-position="795">
+              <caret line="90" column="64" selection-start-line="90" selection-start-column="64" selection-end-line="90" selection-end-column="64" />
+              <folding>
+                <element signature="e#30#69#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Sfencargo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="788">
+              <caret line="113" column="5" lean-forward="true" selection-start-line="86" selection-start-column="4" selection-end-line="113" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Sfdadospgto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="597">
+              <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Sfpredocns.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="633">
+              <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Models/Sfpredocob.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="507">
+              <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Sfcentrocusto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="263" lean-forward="true" selection-start-line="263" selection-end-line="263" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Sfcompensacao.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="759">
+              <caret line="68" column="38" lean-forward="true" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -59,8 +125,6 @@
       <list>
         <option value="$PROJECT_DIR$/app/Models/Sfpredocdarf.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_17_160829_create_sfdomiciliobancario_table.php" />
-        <option value="$PROJECT_DIR$/app/Models/Sfpredocob.php" />
-        <option value="$PROJECT_DIR$/app/Models/Sfpredocns.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfpredocdar.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfpredocgfip.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfpredocgps.php" />
@@ -74,7 +138,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_04_17_171505_create_sfrelsemitem_table.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfdomiciliobancario.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfrelsemitem.php" />
-        <option value="$PROJECT_DIR$/app/Models/Sfencargo.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfdocorigem.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfdocrelacionado.php" />
         <option value="$PROJECT_DIR$/app/Models/Sftramite.php" />
@@ -82,7 +145,6 @@
         <option value="$PROJECT_DIR$/app/Models/Sfpcoitem.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfparcela.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfpco.php" />
-        <option value="$PROJECT_DIR$/app/Models/Sfcronbaixapatrimonial.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfpso.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfpsoitem.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_17_162819_create_sfpredocgru_table.php" />
@@ -90,9 +152,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_04_16_200642_create_sfpredoc_table.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfcredito.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfoutroslanc.php" />
-        <option value="$PROJECT_DIR$/app/Models/Sfdeducao.php" />
-        <option value="$PROJECT_DIR$/app/Models/Sfdespesaanularitem.php" />
-        <option value="$PROJECT_DIR$/app/Models/Sfcompensacao.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_17_170604_create_sfdespesaanular_table.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfdespesaanular.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_17_171444_create_sfrelcomitemvalor_table.php" />
@@ -101,13 +160,20 @@
         <option value="$PROJECT_DIR$/app/Models/Sfrelcomitemvalor.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_17_171517_create_sfrelsemitemvalor_table.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfrelsemitemvalor.php" />
-        <option value="$PROJECT_DIR$/app/Models/Sfcentrocusto.php" />
-        <option value="$PROJECT_DIR$/app/Models/Sfdadospgto.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfdoccontabilizacao.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/Models/Sfpadrao.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/app/Models/Sfdeducao.php" />
+        <option value="$PROJECT_DIR$/app/Models/Sfencargo.php" />
+        <option value="$PROJECT_DIR$/app/Models/Sfcronbaixapatrimonial.php" />
+        <option value="$PROJECT_DIR$/app/Models/Sfdespesaanularitem.php" />
+        <option value="$PROJECT_DIR$/app/Models/Sfcompensacao.php" />
+        <option value="$PROJECT_DIR$/app/Models/Sfcentrocusto.php" />
+        <option value="$PROJECT_DIR$/app/Models/Sfpadrao.php" />
+        <option value="$PROJECT_DIR$/app/Models/Sfdadospgto.php" />
+        <option value="$PROJECT_DIR$/app/Models/Sfpredocns.php" />
+        <option value="$PROJECT_DIR$/app/Models/Sfpredocob.php" />
       </list>
     </option>
   </component>
@@ -196,8 +262,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1834" />
-    <option name="y" value="-18" />
+    <option name="x" value="2023" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1066" />
   </component>
@@ -221,7 +287,8 @@
             <path>
               <item name="sta" type="b2602c69:ProjectViewProjectNode" />
               <item name="sta" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -296,12 +363,12 @@
       <workItem from="1556213507050" duration="10189000" />
       <workItem from="1556272203556" duration="21138000" />
       <workItem from="1556537033741" duration="1240000" />
-      <workItem from="1556625255881" duration="81000" />
+      <workItem from="1556625255881" duration="11578000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185984000" />
+    <option name="totallyTimeSpent" value="197481000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
@@ -333,50 +400,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfacrescimo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfpredoc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_17_165641_create_sfencargo_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="17" column="44" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="44" />
-          <caret line="18" column="43" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="43" />
-          <caret line="19" column="35" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="35" />
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="43" />
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="33" />
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="38" />
-          <caret line="23" column="39" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="39" />
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="33" />
-          <caret line="25" column="39" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="39" />
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="36" />
-          <caret line="27" column="44" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="44" />
-          <caret line="28" column="38" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="38" />
-          <caret line="29" column="39" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="39" />
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="38" />
-          <caret line="31" column="39" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="39" />
-          <caret line="32" column="38" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="38" />
-          <caret line="33" column="39" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_200421_create_sfdocorigem_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" column="49" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_200422_create_sfdocrelacionado_table.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -401,13 +424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfdadosbasicos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="68" column="5" selection-start-line="25" selection-start-column="3" selection-end-line="68" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_200449_create_sfpcoitem_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -419,13 +435,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="17" column="54" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfcronbaixapatrimonial.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
@@ -509,16 +518,6 @@
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_200516_create_sfpso_table.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfdeducao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="129" column="5" lean-forward="true" selection-start-line="116" selection-start-column="4" selection-end-line="129" selection-end-column="5" />
-          <folding>
-            <element signature="e#30#69#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Sfrelsemitem.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -575,24 +574,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfdespesaanularitem.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Sfdomiciliobancario.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfcompensacao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="43" column="5" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="43" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -602,13 +587,6 @@
           <caret line="20" column="43" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="43" />
           <caret line="21" column="43" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="43" />
           <caret line="22" column="33" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfdadospgto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -630,26 +608,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfencargo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="84" column="5" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="84" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_17_172552_create_sfdadospgto_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="44" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="44" />
           <caret line="18" column="45" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="45" />
           <caret line="19" column="33" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfcentrocusto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="75" column="19" lean-forward="true" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -681,23 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpadraoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="5" selection-start-line="11" selection-start-column="4" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfpadrao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="259" column="5" lean-forward="true" selection-start-line="259" selection-start-column="5" selection-end-line="259" selection-end-column="5" />
-          <folding>
-            <element signature="e#30#69#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
@@ -707,8 +654,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        <state relative-caret-position="468">
+          <caret line="26" column="56" lean-forward="true" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfpredoc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="133" column="32" lean-forward="true" selection-start-line="133" selection-start-column="32" selection-end-line="133" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfdadosbasicosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" column="59" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_Siafi/SfpadraoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfdeducao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="156" column="53" lean-forward="true" selection-start-line="156" selection-start-column="53" selection-end-line="156" selection-end-column="53" />
+          <folding>
+            <element signature="e#30#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfdadosbasicos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="860">
+          <caret line="62" column="37" lean-forward="true" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfcronbaixapatrimonial.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="40" column="9" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="40" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfcompensacao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="68" column="38" lean-forward="true" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfdespesaanularitem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="52" column="9" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="52" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfcentrocusto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="263" lean-forward="true" selection-start-line="263" selection-end-line="263" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfpadrao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="90" column="64" selection-start-line="90" selection-start-column="64" selection-end-line="90" selection-end-column="64" />
+          <folding>
+            <element signature="e#30#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfencargo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="788">
+          <caret line="113" column="5" lean-forward="true" selection-start-line="86" selection-start-column="4" selection-end-line="113" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfdadospgto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfpredocns.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfpredocob.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
         </state>
       </provider>
     </entry>
