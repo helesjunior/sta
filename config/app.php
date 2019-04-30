@@ -3,7 +3,9 @@
 return [
 
     'path_pendentes' => 'C:\XML/RECEBIDOS/',
+//    'path_pendentes' => 'Z:\STA/RECEBIDOS/',
     'path_processados' => 'C:\XML/PROCESSADOS/',
+//    'path_processados' => 'Z:\STA/PROCESSADOS/',
 
 
     /*
