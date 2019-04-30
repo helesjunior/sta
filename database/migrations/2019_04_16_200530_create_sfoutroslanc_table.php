@@ -32,6 +32,11 @@ class CreateSfoutroslancTable extends Migration
             $table->string('tpNormalEstorno')->nullable();
             $table->timestamps();
         });
+
+        Schema::table('sfoutroslanc', function (Blueprint $table) {
+            $table->foreign('sfpadrao_id')->references('id')->on('sfpadrao')->onDelete('cascade');
+        });
+
     }
 
     /**

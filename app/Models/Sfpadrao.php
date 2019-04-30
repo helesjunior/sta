@@ -168,7 +168,6 @@ class Sfpadrao extends Model
 
         $this->fill($dado);
         $this->save();
-
         $this->createDadosBasicosFromXml($dado);
         $this->createPcoFromXml($dado);
         $this->createPsoFromXml($dado);
