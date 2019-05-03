@@ -32,18 +32,19 @@ class DocHabilController extends Controller
 
         foreach ($arquivos as $arq) {
             $arq1 = explode('.', $arq);
-            if ($arq1[1] == 'zip') {
-                $nomearquivo[] = $arq1[0];
-                $zip = new \ZipArchive();
-                if ($zip->open($path.$arq1[0].'.zip') === TRUE) {
-                    $zip->extractTo($path.'/'.$arq1[0]);
-                    $zip->close();
+            if(isset($arq1[1])){
+                if ($arq1[1] == 'zip') {
+                    $nomearquivo[] = $arq1[0];
+                    $zip = new \ZipArchive();
+                    if ($zip->open($path.$arq1[0].'.zip') === TRUE) {
+                        $zip->extractTo($path.'/'.$arq1[0]);
+                        $zip->close();
+                    }
+                }
+                if ($arq1[1] == 'xml') {
+                    $nomearquivo[] = $arq1[0];
                 }
             }
-            if ($arq1[1] == 'xml') {
-                $nomearquivo[] = $arq1[0];
-            }
-
         }
 
         if (count($nomearquivo)) {
@@ -111,5 +112,9 @@ class DocHabilController extends Controller
 
 
     }
+
+
+
+
 
 }

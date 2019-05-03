@@ -55,6 +55,6 @@ class Sfdespesaanularitem extends Model
 
     public function relEncargo()
     {
-        return $this->morphMany(Sfrelsemitem::class, 'sfrelsemitemable');
+        return $this->morphMany(Sfrelsemitem::class, 'sfrelsemitemdeducaoable');
     }
 }

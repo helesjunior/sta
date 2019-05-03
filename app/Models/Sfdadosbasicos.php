@@ -26,6 +26,21 @@ class Sfdadosbasicos extends Model
     public function createFromXml(array $dado)
     {
 
+        $dado['txtObser'] = preg_replace("/[\t\n\r\f\v]/", "", $dado['txtObser']);
+
+        $txt = null;
+        if(isset($dado['txtInfoAdic'])){
+            if(is_array($dado['txtInfoAdic'])){
+                foreach ($dado['txtInfoAdic'] as $txtinfoadic){
+                    $txt .= preg_replace("/[\t\n\r\f\v]/", "", $txtinfoadic);
+                }
+            }else{
+                $txt = preg_replace("/[\t\n\r\f\v]/", "", $dado['txtInfoAdic']);
+            }
+            $dado['txtInfoAdic'] = $txt;
+        }
+
+
         $this->fill($dado);
         $this->save();
 

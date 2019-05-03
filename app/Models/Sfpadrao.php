@@ -166,6 +166,8 @@ class Sfpadrao extends Model
     {
         $this->buscaSfpadrao($dado);
 
+
+
         $this->fill($dado);
         $this->save();
         $this->createDadosBasicosFromXml($dado);
@@ -220,6 +222,7 @@ class Sfpadrao extends Model
         $sfdadosbasicos->createFromXml($dadosbasicos);
 
     }
+
 
     private function createDeducaoFromXml(array $dado)
     {
