@@ -262,6 +262,19 @@ class Sfcentrocusto extends Model
     }
 
 
+    public function retornaCentroCustoMesAnoUg(string $mes, string $ano, string $ug)
+    {
+        $busca = $this->whereHas('sfpadrao', function ($q) use ($ug){
+            $q->where('codUgEmit',$ug);
+        });
+        $busca->where('mesReferencia', $mes);
+        $busca->where('anoReferencia', $ano);
+
+        return $busca->get();
+    }
+
+
+
     public function relPcoItem()
     {
         return $this->morphMany(Sfrelcomitemvalor::class, 'sfrelcomitemvalorpcoable');
@@ -310,6 +323,11 @@ class Sfcentrocusto extends Model
     public function relDespesaAnular()
     {
         return $this->morphMany(Sfrelcomitemvalor::class, 'sfrelcomitemvalordespesaanularable');
+    }
+
+    public function sfpadrao()
+    {
+        return $this->belongsTo(Sfpadrao::class, 'sfpadrao_id');
     }
 
 }

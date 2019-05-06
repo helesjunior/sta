@@ -32,12 +32,12 @@ class DocHabilController extends Controller
 
         foreach ($arquivos as $arq) {
             $arq1 = explode('.', $arq);
-            if(isset($arq1[1])){
+            if (isset($arq1[1])) {
                 if ($arq1[1] == 'zip') {
                     $nomearquivo[] = $arq1[0];
                     $zip = new \ZipArchive();
-                    if ($zip->open($path.$arq1[0].'.zip') === TRUE) {
-                        $zip->extractTo($path.'/'.$arq1[0]);
+                    if ($zip->open($path . $arq1[0] . '.zip') === true) {
+                        $zip->extractTo($path . '/' . $arq1[0]);
                         $zip->close();
                     }
                 }
@@ -74,27 +74,26 @@ class DocHabilController extends Controller
         $name = $path . $nomeaquivo;
         $namedestino = $path_processados . $nomeaquivo;
 
-        if(is_file($name.".xml")){
-            $myfile = file_get_contents($name.".xml");
-        }else{
-            $myfile = file_get_contents($name."/".$nomeaquivo.".xml");
+        if (is_file($name . ".xml")) {
+            $myfile = file_get_contents($name . ".xml");
+        } else {
+            $myfile = file_get_contents($name . "/" . $nomeaquivo . ".xml");
         }
 
-        $xml = simplexml_load_string(str_replace(':','',$myfile));
+        $xml = simplexml_load_string(str_replace(':', '', $myfile));
 
 
-        if(isset($xml->ns2CprDhConsultar))
-        {
+        if (isset($xml->ns2CprDhConsultar)) {
             $i = null;
-            try{
-                foreach($xml->ns2CprDhConsultar as $key => $dochabil){
+            try {
+                foreach ($xml->ns2CprDhConsultar as $key => $dochabil) {
                     $i = $key;
                     $json = json_encode($dochabil);
-                    $array = json_decode($json,TRUE);
+                    $array = json_decode($json, true);
                     $busca = new Sfpadrao;
                     $sfpadrao = $busca->createFromXml($array);
                 }
-            }catch (\Exception $exception){
+            } catch (\Exception $exception) {
 
 //                echo "Erro Linha: ".$i;
                 throw $exception;
@@ -112,7 +111,6 @@ class DocHabilController extends Controller
 
 
     }
-
 
 
 

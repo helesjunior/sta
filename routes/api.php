@@ -25,6 +25,7 @@ Route::group([
     Route::get('/empenho/{dado}', 'EmpenhoController@buscaEmpenhoPorNumero');
     Route::get('/ordembancaria/favorecido/{dado}', 'OrdembancariaController@buscaOrdembancariaPorCnpj');
     Route::get('/ordembancaria/ano/{ano}/ug/{ug}', 'OrdembancariaController@buscaOrdembancariaPorAnoUg');
+    Route::get('/centrocusto/mesref/{mesref}/ug/{ug}', 'CentroCustoController@buscaCentroCustoPorMesrefUg');
     Route::get('/ler/empenhodetalhado', 'EmpenhodetalhadoController@ler');
     Route::get('/ler/credor', 'CredorController@ler');
     Route::get('/ler/unidade', 'UnidadeController@ler');

@@ -4,9 +4,8 @@
     <list default="true" id="f5f7bbf1-8681-41d7-955f-e279d69fe13c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfdadosbasicos.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfdadosbasicos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfdespesaanularitem.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfdespesaanularitem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sfpadrao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfpadrao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Sfcentrocusto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sfcentrocusto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +17,59 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1649">
+              <caret line="100" column="24" selection-start-line="100" selection-start-column="24" selection-end-line="100" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/CentroCustoController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="e#44#73#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Sfcentrocusto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="638">
+              <caret line="327" column="10" lean-forward="true" selection-start-line="327" selection-start-column="10" selection-end-line="327" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Sfpadrao.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="543">
+              <caret line="450" column="29" selection-start-line="450" selection-start-column="22" selection-end-line="450" selection-end-column="29" />
+              <folding>
+                <element signature="e#30#69#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -34,6 +85,7 @@
       <find>dd</find>
       <find>dd (</find>
       <find>jquery</find>
+      <find>left</find>
     </findStrings>
     <replaceStrings>
       <replace>listaempenho</replace>
@@ -52,8 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2019_04_17_160829_create_sfdomiciliobancario_table.php" />
-        <option value="$PROJECT_DIR$/app/Models/Sfpredocdar.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfpredocgfip.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfpredocgps.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfpredocgru.php" />
@@ -94,7 +144,6 @@
         <option value="$PROJECT_DIR$/app/Models/Sfencargo.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfcronbaixapatrimonial.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfcompensacao.php" />
-        <option value="$PROJECT_DIR$/app/Models/Sfcentrocusto.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfdadospgto.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfpredocns.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfpredocob.php" />
@@ -103,6 +152,9 @@
         <option value="$PROJECT_DIR$/app/Models/Sfpadrao.php" />
         <option value="$PROJECT_DIR$/app/Models/Sfdespesaanularitem.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/app/Models/Sfcentrocusto.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/CentroCustoController.php" />
       </list>
     </option>
   </component>
@@ -191,10 +243,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2106" />
-    <option name="y" value="-19" />
-    <option name="width" value="1551" />
-    <option name="height" value="848" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -207,6 +259,43 @@
             <path>
               <item name="sta" type="b2602c69:ProjectViewProjectNode" />
               <item name="sta" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sta" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -284,16 +373,20 @@
       <workItem from="1556625255881" duration="12004000" />
       <workItem from="1556744032306" duration="594000" />
       <workItem from="1556884413209" duration="10744000" />
+      <workItem from="1556924439665" duration="1503000" />
+      <workItem from="1557146323844" duration="1249000" />
+      <workItem from="1557147665882" duration="3816000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209245000" />
+    <option name="totallyTimeSpent" value="215813000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20682302" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17004265" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -307,7 +400,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3290461" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -319,34 +412,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_200449_create_sfpcoitem_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_240450_create_sfcronbaixapatrimonial_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" column="54" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfparcela.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_16_240451_create_sfparcela_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" column="57" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Sfpcoitem.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -592,13 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfcentrocusto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="263" lean-forward="true" selection-start-line="263" selection-end-line="263" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Sfcompensacao.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="759">
@@ -641,16 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sfpadrao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="95" column="46" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="46" />
-          <folding>
-            <element signature="e#30#69#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Sfrelsemitem.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
@@ -672,17 +720,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/OrdembancariaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1025">
+          <caret line="352" column="58" lean-forward="true" selection-start-line="352" selection-start-column="58" selection-end-line="352" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/EmpenhoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="201" column="28" lean-forward="true" selection-start-line="201" selection-start-column="28" selection-end-line="201" selection-end-column="28" />
+        <state relative-caret-position="34">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/EmpenhodetalhadoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="138" column="88" selection-start-line="138" selection-start-column="51" selection-end-line="138" selection-end-column="88" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/DocHabilController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="909">
-          <caret line="117" selection-start-line="117" selection-end-line="117" />
+        <state relative-caret-position="1649">
+          <caret line="100" column="24" selection-start-line="100" selection-start-column="24" selection-end-line="100" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfpadrao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="450" column="29" selection-start-line="450" selection-start-column="22" selection-end-line="450" selection-end-column="29" />
+          <folding>
+            <element signature="e#30#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Sfcentrocusto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="327" column="10" lean-forward="true" selection-start-line="327" selection-start-column="10" selection-end-line="327" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/CentroCustoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#44#73#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
