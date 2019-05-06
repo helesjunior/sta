@@ -2,10 +2,8 @@
 
 return [
 
-    'path_pendentes' => 'C:\XML/RECEBIDOS/',
-//    'path_pendentes' => 'Z:\STA/RECEBIDOS/',
-    'path_processados' => 'C:\XML/PROCESSADOS/',
-//    'path_processados' => 'Z:\STA/PROCESSADOS/',
+    'path_pendentes' => env('ARQUIVOS_QWARE_RECEBIDOS'),
+    'path_processados' => env('ARQUIVOS_QWARE_PROCESSADOS'),
 
 
     /*
