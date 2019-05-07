@@ -100,7 +100,7 @@ Retorno:
   "numero": "2019NE800015",
   "emissao": "2019-01-22",
   "tipofavorecido": "1",
-  "favorecido": "xxxxxxxxxx",
+  "favorecido": "08247960000162",
   "observacao": "CONTRATACAO DE EMPRESA ESPECIALIZADA NA PRESTACAO DOS SERVICOS DE RECEPÇÃO...",
   "fonte": "0100000000",
   "naturezadespesa": "339039",
