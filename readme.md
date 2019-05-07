@@ -88,14 +88,14 @@ Exemplo de crontab:
 
 Para que tenha acesso as informações no Banco de Dados via API, basta acessar os links:
 
-| Funcionalidade | URL | Exemplo |
-|----------------|-----|---------|
-| Consultar Empenho | dominio_ou_ip/api/empenho/{ug}{gestao}{numero_empenho} | dominio_ou_ip/api/empenho/110161000012019NE800001 |
-| Consultar Ordens Bancárias por Favorecido | dominio_ou_ip/api/ordembancaria/favorecido/{cnpj_cpf_iggenerico_ug} | dominio_ou_ip/api/ordembancaria/favorecido/110062 |
-| Consultar Ordens Bancárias por Ano e Unidade Gestora |  dominio_ou_ip/api/ordembancaria/ano/{ano}/ug/{ug} | dominio_ou_ip/api/ordembancaria/ano/2019/ug/110161 |
+Funcionalidade: __Consultar Empenho__
+- __URL:__ dominio_ou_ip/api/empenho/{ug}{gestao}{numero_empenho}
+- __Exemplo:__ dominio_ou_ip/api/empenho/110161000012019NE800001
 
- 
+Funcionalidade: __Consultar Ordens Bancárias por Favorecido__
+- __URL:__ dominio_ou_ip/api/ordembancaria/favorecido/{cnpj_cpf_idgenerico_ug}
+- __Exemplo:__ dominio_ou_ip/api/ordembancaria/favorecido/110062
 
-
-
-
+Funcionalidade: __Consultar Ordens Bancárias por Ano e Unidade Gestora__
+- __URL:__ dominio_ou_ip/api/ordembancaria/ano/{ano}/ug/{ug}
+- __Exemplo:__ dominio_ou_ip/api/ordembancaria/ano/2019/ug/110161
