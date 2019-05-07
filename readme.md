@@ -66,13 +66,35 @@ __*Observação: O usuário que executar esses comandos deverá ter as permissõ
 
 | Descrição | URL |
 |-----------|-----|
-| Documentos Hábeis | Dominio_ou_ip/api/ler/dochabil |
-| Empenhos | Dominio_ou_ip/api/ler/empenho |
-| Detalhamento do Empenho | Dominio_ou_ip/api/ler/empenhodetalhado |
-| Ordem Bancária | Dominio_ou_ip/api/ler/ordembancaria |
-| Plano Interno | Dominio_ou_ip/api/ler/planointerno |
-| Credor | Dominio_ou_ip/api/ler/credor |
-| Unidades | Dominio_ou_ip/api/ler/unidade |
+| Documentos Hábeis | dominio_ou_ip/api/ler/dochabil |
+| Empenhos | dominio_ou_ip/api/ler/empenho |
+| Detalhamento dos Empenhos | dominio_ou_ip/api/ler/empenhodetalhado |
+| Ordens Bancárias | dominio_ou_ip/api/ler/ordembancaria |
+| Plano Interno | dominio_ou_ip/api/ler/planointerno |
+| Credores | dominio_ou_ip/api/ler/credor |
+| Unidades | dominio_ou_ip/api/ler/unidade |
+
+*Esse links devem ser adicionados no Crontab do servidor para que sejam executados diariamente de forma automática:*
+
+Exemplo de crontab:
+
+```
+0 8 * * * lynx -dump http://dominio_ou_ip/api/ler/empenho
+5 8 * * * lynx -dump http://dominio_ou_ip/api/ler/empenhodetalhado
+10 8 * * * lynx -dump http://dominio_ou_ip/api/ler/ordembancaria
+```
+
+### Acesso as informações da API
+
+Para que tenha acesso as informações no Banco de Dados via API, basta acessar os links:
+
+| Funcionalidade | URL | Exemplo |
+|----------------|-----|---------|
+| Consultar Empenho | dominio_ou_ip/api/empenho/{ug}{gestao}{numero_empenho} | dominio_ou_ip/api/empenho/110161000012019NE800001 |
+| Consultar Ordens Bancárias por Favorecido | dominio_ou_ip/api/ordembancaria/favorecido/{cnpj_cpf_iggenerico_ug} | dominio_ou_ip/api/ordembancaria/favorecido/110062 |
+| Consultar Ordens Bancárias por Ano e Unidade Gestora |  dominio_ou_ip/api/ordembancaria/ano/{ano}/ug/{ug} | dominio_ou_ip/api/ordembancaria/ano/2019/ug/110161 |
+
+ 
 
 
 
