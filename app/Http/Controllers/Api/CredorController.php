@@ -137,7 +137,7 @@ class CredorController extends Controller
             if ($credor[$i]['tipo_fornecedor'] == 4) {
                 $credor[$i]['cpf_cnpj_idgener'] = str_pad(substr($credor[$i]['dado'], 0, 6), 6, "0", STR_PAD_LEFT);
             } else {
-                $credor[$i]['cpf_cnpj_idgener'] = $this->formataCnpjCpf($credor[$i]['dado'], $credor[$i]['tipo_fornecedor']);
+                $credor[$i]['cpf_cnpj_idgener'] = $this->formataCnpjCpfTipo($credor[$i]['dado'], $credor[$i]['tipo_fornecedor']);
             }
 
             $i++;
@@ -150,33 +150,5 @@ class CredorController extends Controller
         return $credor;
     }
 
-    public function formataCnpjCpf($dado, $tipo)
-    {
-
-        $retorno = $dado;
-
-        if ($tipo == '1') {
-            $d[0] = substr($dado, 0, 2);
-            $d[1] = substr($dado, 2, 3);
-            $d[2] = substr($dado, 5, 3);
-            $d[3] = substr($dado, 8, 4);
-            $d[4] = substr($dado, 12, 2);
-
-            $retorno = $d[0] . '.' . $d[1] . '.' . $d[2] . '/' . $d[3] . '-' . $d[4];
-
-        }
-
-        if ($tipo == '2') {
-            $d[0] = substr($dado, 0, 3);
-            $d[1] = substr($dado, 3, 3);
-            $d[2] = substr($dado, 6, 3);
-            $d[3] = substr($dado, 9, 2);
-
-            $retorno = $d[0] . '.' . $d[1] . '.' . $d[2] . '-' . $d[3];
-        }
-
-        return $retorno;
-
-    }
 
 }
