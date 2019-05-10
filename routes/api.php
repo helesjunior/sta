@@ -21,11 +21,11 @@ Route::group([
     'namespace' => 'Api',
 ], function () {
     //API leitura de arquivos qware (STA)
+    Route::get('/ler/unidade', 'UnidadeController@ler');
+    Route::get('/ler/credor', 'CredorController@ler');
+    Route::get('/ler/planointerno', 'PlanointernoController@ler');
     Route::get('/ler/empenho', 'EmpenhoController@ler');
     Route::get('/ler/empenhodetalhado', 'EmpenhodetalhadoController@ler');
-    Route::get('/ler/credor', 'CredorController@ler');
-    Route::get('/ler/unidade', 'UnidadeController@ler');
-    Route::get('/ler/planointerno', 'PlanointernoController@ler');
     Route::get('/ler/ordembancaria/', 'OrdembancariaController@ler');
     Route::get('/ler/dochabil', 'DocHabilController@ler');
 
