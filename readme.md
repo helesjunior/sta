@@ -59,6 +59,28 @@ chmod +x up.sh
 ```
 __*Observação: O usuário que executar esses comandos deverá ter as permissões necessárias.*__
 
+## Como configurar Q-ware no STA
+
+Para utilizar essa API, primeiro deverá configurar um Servidor Q-ware seguindo as orientações constantes dos links:
+- [STA - Sistema de Transferência de Arquivos](http://www.serpro.gov.br/menu/suporte/downloads/downloads-e-softwares/sta);
+- [Ajuda - STA - Sistema de Transferência de Arquivos](https://sta.tesouro.fazenda.gov.br/pcasp/ajuda/ajuda_index.htm).
+
+## Agendamentos no STA - Sistema de Transferência de Arquivos
+
+Agendamentos necessários para utilização da API STA.
+
+Entre no sistema [Sistema de Transferência de Arquivos](https://sta.tesouro.fazenda.gov.br) e agende as seguintes consultas:
+
+
+| Nome  | Periodicidade | Tipo Arquivo | Nome Arquivo | Forma Extração |
+| ----- | ------------- | ------------ | ------------ | -------------- |
+| UG  | Diária  | Tabela-Administrativo | 	Unidade Gestora | Acumulada |
+| CREDOR  | Diária  | Tabela-Administrativo | 	Credor | Acumulada |
+| PI  | Diária  | 	Tabela-Orçamentária | 	Plano Interno | Acumulada |
+| NE  | Diária  | Documento | Empenho - NE | Incremental |
+| NEITENS  | Diária  | Documento | Descrição de Empenho (Lista de itens) | Incremental |
+| OB  | Diária  | Documento | Ordem Bancária - OB | Incremental |
+
 ## Como Usar a API
 
 ### Links para leitura dos arquivos do STA

@@ -35,7 +35,7 @@ class EmpenhodetalhadoController extends Controller
 
         if (count($nomearquivo)) {
             foreach ($nomearquivo as $nome) {
-                if (substr($nome, 0, 5) == 'itens') {
+                if (substr($nome, 0, 7) == 'neitens') {
                     $listaempenho = $this->lerArquivo($nome);
 
                     foreach ($listaempenho as $e) {
