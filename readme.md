@@ -1,4 +1,4 @@
-# STA
+# API STA
 
 Ferramenta de Leitura de arquivos do STA - Sistema de Transferência de Arquivos - STN
 
@@ -48,6 +48,22 @@ cp .env.example .env
 php artisan key:generate
 php artisan migrate
 ```
+
+Edite as seguintes variáveis do arquivo .env para configurar a conexão com o Banco de Dados PostgreSQL e os Diretórios que se encontram os arquivos enviados pelo STA - Sistema de Transferência de Arquivos - STN.
+
+```
+DB_CONNECTION=pgsql
+DB_HOST=host_ou_ip
+DB_PORT=5432
+DB_DATABASE=nome_banco
+DB_USERNAME=nome_usuario
+DB_PASSWORD=senha_usuario
+
+ARQUIVOS_QWARE_RECEBIDOS=Z:\STA\RECEBIDOS\
+ARQUIVOS_QWARE_PROCESSADOS=Z:\STA\PROCESSADOS\
+```
+
+
 
 ## Instalação e Configuração no Docker
 
