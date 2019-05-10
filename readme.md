@@ -63,8 +63,6 @@ ARQUIVOS_QWARE_RECEBIDOS=Z:\STA\RECEBIDOS\
 ARQUIVOS_QWARE_PROCESSADOS=Z:\STA\PROCESSADOS\
 ```
 
-
-
 ## Instalação e Configuração no Docker
 
 Basta executar o comando:
