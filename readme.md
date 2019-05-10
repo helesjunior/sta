@@ -95,120 +95,131 @@ Para que tenha acesso as informações no Banco de Dados via API, basta acessar 
 Retorno:
 ```
 {
-  "ug": "110096",
+  "ug": "110102",
   "gestao": "00001",
-  "numero": "2019NE800015",
-  "emissao": "2019-01-22",
-  "tipofavorecido": "1",
-  "favorecido": "08247960000162",
-  "observacao": "CONTRATACAO DE EMPRESA ESPECIALIZADA NA PRESTACAO DOS SERVICOS DE RECEPÇÃO...",
+  "numero": "2019NE800534",
+  "emissao": "2019-05-08",
+  "tipocredor": "1",
+  "cpfcnpjugidgener": "10.439.655/0001-14",
+  "nome": "PEDRO REGINALDO DE ALBERNAZ FARIA E FAGUNDES LTDA",
+  "observacao": "CONTRATAÇÃO PARA PRESTAÇÃO DE SERVIÇO CONTINUADO DE ZELADOR - AGU/ES - 1 POSTODIURNO E 1 POSTO NOTURNO. EXERCICIO 2019. PROC ORIGEM: 2018PR00020",
   "fonte": "0100000000",
   "naturezadespesa": "339039",
-  "planointerno": "AGU0048",
-  "itens": {
-    "001": {
-      "subitem": "79",
-      "quantidade": "0.03606",
-      "descricao": "PRESTACAO DE SERVICOS DE APOIO ADMINISTRATIVO",
-      "valorunitario": "2048138.93",
-      "valortotal": "73855.89"
-    }
-  },
-  "ordensbancarias": [
-    {
-      "numero": "2019OB800460",
-      "emissao": "2019-02-05",
-      "valor": "519.27",
-      "documentoorigem": "2019NP000329",
-      "favorecido": "10091536000113"
-    },
-    {
-      "numero": "2019OB800463",
-      "emissao": "2019-02-05",
-      "valor": "8836.37",
-      "documentoorigem": "2019NP000331",
-      "favorecido": "08247960000162"
-    }
-  ]
+  "picodigo": "AGU9999",
+  "pidescricao": "PLANO INTERNO NÃO CADASTRADO"
 }
 ```
 
-##### 2 - __Consultar Ordens Bancárias por Favorecido__
-- __URL:__ dominio_ou_ip/api/ordembancaria/favorecido/{cnpj_cpf_idgenerico_ug}
-- __Exemplo:__ dominio_ou_ip/api/ordembancaria/favorecido/110062
+##### 2 - __Consultar Empenho por Ano e Unidade Gestora (UG)__
+- __URL:__ dominio_ou_ip/api/empenho/ano/{ano}/ug/{ug}
+- __Exemplo:__ dominio_ou_ip/api/empenho/ano/2019/ug/110099
 
 Retorno:
 ```
-{
-  "1": {
-    "ug": "110581",
+[
+  {
+    "ug": "110099",
     "gestao": "00001",
-    "numero": "2014OB800466",
-    "emissao": "2014-02-05",
-    "tipofavorecido": "2",
-    "favorecido": "110062",
-    "observacao": "PROC 000751/14 DOC GERADO PELO SCDP. PCDP 000751/14 P/ PGTO. DE  ...",
-    "tipoob": "11",
-    "processo": "",
-    "cancelamentoob": "0",
-    "numeroobcancelamento": "",
-    "valor": "2.735,00",
-    "documentoorigem": "2014AV000469"
-  },
-  "2": {
-    "ug": "110581",
-    "gestao": "00001",
-    "numero": "2014OB802071",
-    "emissao": "2014-03-20",
-    "tipofavorecido": "2",
-    "favorecido": "110062",
-    "observacao": "PROC 000113/14 DOC GERADO PELO SCDP. PCDP 000113/14 P/ PGTO. DE  ...",
-    "tipoob": "11",
-    "processo": "",
-    "cancelamentoob": "0",
-    "numeroobcancelamento": "",
-    "valor": "178,46",
-    "documentoorigem": "2014AV002054"
+    "numero": "2019NE000102",
+    "emissao": "2019-05-08",
+    "tipocredor": "1",
+    "cpfcnpjugidgener": "43.714.674/0001-60",
+    "nome": "CONSTRUTORA E INCORPORADORA EXATA LTDA",
+    "observacao": "ATENDER REEMBOLSO DE DESP. DE AGUA E ESGOTO DO ED. OFFICE BUILDING LOCADO PARAA SEDE DA AGU/SP, REFERENTE AO MêS DE ABRIL/2019. PROC.00589.000346/2019-62",
+    "fonte": "0100000000",
+    "naturezadespesa": "339093",
+    "picodigo": "AGU0033",
+    "pidescricao": "SERVICOS DE ÁGUA E COLETA DE ESGOTO"
   }
-}
+  {
+    ...
+  }
+]
 ```
 
-##### 3 - __Consultar Ordens Bancárias por Ano e Unidade Gestora__
+##### 3 - __Consultar Detalhamento do Empenho__
+- __URL:__ dominio_ou_ip/api/empenhodetalhado/{ug}{gestao}{numero_empenho}
+- __Exemplo:__ dominio_ou_ip/api/empenhodetalhado/110096000012019NE800015
+
+Retorno:
+```
+[
+  {
+    "numitem": "001",
+    "subitem": "02",
+    "quantidade": "1.00000",
+    "valorunitario": "8187.36",
+    "valortotal": "8187.36"
+  }
+  {
+    ...
+  }
+]
+```
+
+##### 4 - __Consultar Ordens Bancárias por Favorecido__
+- __URL:__ dominio_ou_ip/api/ordembancaria/favorecido/{cnpj_cpf_idgenerico_ug}
+- __Exemplo:__ dominio_ou_ip/api/ordembancaria/favorecido/08247960000162
+
+Retorno:
+```
+[
+  {
+    "ug": "110096",
+    "gestao": "00001",
+    "numero": "2019OB802087",
+    "emissao": "2019-05-08",
+    "tipofavorecido": "1",
+    "favorecidocodigo": "08.247.960/0001-62",
+    "favorecidonome": "REAL JG SERVICOS GERAIS EIRELI",
+    "observacao": "PAGAMENTO DAS NFS. 6823/6825 DE 02/MAR/2019, REF. ABR/2019 PARA ATENDER A PSU/PTA/PE, CONTRATO 012/2017. 00506.000056/2019-91, COM SERVIÇOS DE RECEPÇÃO,OP. DE MÁQUINA, CONTÍNUO E COPEIRA.",
+    "tipoob": "12",
+    "processo": "00506.000056/2019-91",
+    "cancelamentoob": "0",
+    "numeroobcancelamento": "",
+    "valor": "8.879,97",
+    "documentoorigem": "2019NP001694",
+    "empenhos": [
+      "110096000012019NE800015",
+      "110096000012019NE800017",
+      "110096000012019NE800018",
+      "110096000012019NE800019"
+    ]
+  },
+  {
+    ...
+  }
+]
+```
+
+##### 5 - __Consultar Ordens Bancárias por Ano e Unidade Gestora__
 - __URL:__ dominio_ou_ip/api/ordembancaria/ano/{ano}/ug/{ug}
 - __Exemplo:__ dominio_ou_ip/api/ordembancaria/ano/2019/ug/110161
 
 Retorno:
 ```
-{
-  "1": {
-    "ug": "110592",
+[
+  {
+    "ug": "110161",
     "gestao": "00001",
-    "numero": "2019OB800002",
-    "emissao": "2019-01-02",
+    "numero": "2019OB801553",
+    "emissao": "2019-05-08",
     "tipofavorecido": "1",
-    "favorecido": "00000000000191",
-    "observacao": "LIQUIDACAO DO  REAVISO DE VENCIMENTO DE DÉBITO - 87692513  DE 10/12/18, ...",
+    "favorecidocodigo": "00.000.000/0001-91",
+    "favorecidonome": "BANCO DO BRASIL SA",
+    "observacao": "PAGAMENTO DE FATURA DO CPGF REFERENTE AO PERÍODO 27/03 A 26/04/2019.",
     "tipoob": "59",
-    "processo": "00677.000021/2018-18",
+    "processo": "00400.000044/2019-45",
     "cancelamentoob": "0",
     "numeroobcancelamento": "",
-    "valor": "7250.61",
-    "documentoorigem": "2018NP001947"
+    "valor": "168,00",
+    "documentoorigem": "2019SF000001",
+    "empenhos": [
+      "110161000012019NE800189"
+    ]
   },
-  "2": {
-    "ug": "110592",
-    "gestao": "00001",
-    "numero": "2019OB800001",
-    "emissao": "2019-01-02",
-    "tipofavorecido": "1",
-    "favorecido": "64799539000135",
-    "observacao": "LIQUIDAÇÃO, POR RECONHECIMENTO DE DÍVIDA DA FATURA 90697 E NF 33303, ...",
-    "tipoob": "12",
-    "processo": "00677.000353/2018-94",
-    "cancelamentoob": "0",
-    "numeroobcancelamento": "",
-    "valor": "513.94",
-    "documentoorigem": "2018NP001948"
+  {
+    ....
   }
-}
+]
 ```

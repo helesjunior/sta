@@ -58,37 +58,6 @@ class OrdembancariaController extends Controller
                             $novo_ordembancaria->numeroobcancelamento = $e['numeroobcancelamento'];
                             $novo_ordembancaria->valor = $e['valor'];
                             $novo_ordembancaria->documentoorigem = $e['documentoorigem'];
-
-//                            if(isset($e['empenho01'])){
-//                                $novo_ordembancaria->empenho01 = $e['empenho01'];
-//                            }
-//                            if(isset($e['empenho02'])) {
-//                                $novo_ordembancaria->empenho02 = $e['empenho02'];
-//                            }
-//                            if(isset($e['empenho03'])) {
-//                                $novo_ordembancaria->empenho03 = $e['empenho03'];
-//                            }
-//                            if(isset($e['empenho04'])) {
-//                                $novo_ordembancaria->empenho04 = $e['empenho04'];
-//                            }
-//                            if(isset($e['empenho05'])){
-//                                $novo_ordembancaria->empenho05 = $e['empenho05'];
-//                            }
-//                            if(isset($e['empenho06'])) {
-//                                $novo_ordembancaria->empenho06 = $e['empenho06'];
-//                            }
-//                            if(isset($e['empenho07'])) {
-//                                $novo_ordembancaria->empenho07 = $e['empenho07'];
-//                            }
-//                            if(isset($e['empenho08'])) {
-//                                $novo_ordembancaria->empenho08 = $e['empenho08'];
-//                            }
-//                            if(isset($e['empenho09'])) {
-//                                $novo_ordembancaria->empenho09 = $e['empenho09'];
-//                            }
-//                            if(isset($e['empenho10'])) {
-//                                $novo_ordembancaria->empenho10 = $e['empenho10'];
-//                            }
                             $novo_ordembancaria->save();
 
                             if (isset($e['empenhos'])) {
@@ -140,12 +109,14 @@ class OrdembancariaController extends Controller
         while (!gzeof($myfile)) {
             $line = gzgets($myfile);
 
-            if (strlen($line) == 0) break;
+            if (strlen($line) == 0) {
+                break;
+            }
 
             $ref[$i]['column'] = trim(substr($line, 0, 40));
             $ref[$i]['type'] = trim(substr($line, 40, 1));
 
-            if (strstr(trim(substr($line, 42, 4)), ",") != FALSE) {
+            if (strstr(trim(substr($line, 42, 4)), ",") != false) {
                 $num = explode(",", trim(substr($line, 42, 4)));
                 $ref[$i]['size'] = $num[0] + $num[1];
                 $ref[$i]['decimal'] = $num[1];
@@ -182,7 +153,8 @@ class OrdembancariaController extends Controller
                     $ordembancaria[$i]['numero'] = substr($valor, 11, 12);
                 }
                 if ($campo == 'IT-DA-EMISSAO') {
-                    $ordembancaria[$i]['emissao'] = substr($valor, 0, 4) . '-' . substr($valor, 4, 2) . '-' . substr($valor, 6, 2);
+                    $ordembancaria[$i]['emissao'] = substr($valor, 0, 4) . '-' . substr($valor, 4,
+                            2) . '-' . substr($valor, 6, 2);
                 }
                 if ($campo == 'IT-IN-FAVORECIDO') {
                     $ordembancaria[$i]['tipofavorecido'] = $valor;
@@ -245,24 +217,6 @@ class OrdembancariaController extends Controller
                     $ordembancaria[$i]['valor'] = number_format($valor, 2, '.', '');
                 }
 
-//                for($n=1; $n <=10; $n++){
-//                    if ($campo === 'IT-CO-INSCRICAO01('.$n.')') {
-//                        if(strstr($valor, 'NE')){
-//                            $ordembancaria[$i]['empenho'.str_pad($n, 2, "0", STR_PAD_LEFT)] = substr(strtoupper(utf8_encode($valor)),0,12);
-//                        }
-//
-//                    }
-//
-//                    if ($campo === 'IT-CO-INSCRICAO1('.$n.')') {
-//                        if(strstr($valor, 'NE')){
-//                            $ordembancaria[$i]['empenho'.str_pad($n, 2, "0", STR_PAD_LEFT)] = substr(strtoupper(utf8_encode($valor)),0,12);
-//
-//                        }
-//
-//                    }
-//
-//                }
-
                 for ($n = 1; $n <= 100; $n++) {
                     if ($campo === 'IT-CO-INSCRICAO01(' . $n . ')') {
                         if (strstr($valor, 'NE')) {
@@ -295,27 +249,39 @@ class OrdembancariaController extends Controller
     public function buscaOrdembancariaPorCnpj($dado)
     {
 
+        $retorno = [];
+
         $ordembancaria = Ordembancaria::where('favorecido', trim($dado))
             ->orderBy('emissao')
             ->get();
 
+
         if (count($ordembancaria)) {
 
-            $i = 1;
+            $i = 0;
             foreach ($ordembancaria as $ob) {
+                $onxne = Obxne::where('ordembancaria_id', $ob->id)
+                    ->orderBy('id')
+                    ->pluck('numeroempenho')->toArray();;
+
+                $credor = new EmpenhoController();
+                $favorecido = $credor->buscaCredor($ob->favorecido, $ob->tipofavorecido);
+
                 $retorno[$i]['ug'] = $ob->ug;
                 $retorno[$i]['gestao'] = $ob->gestao;
                 $retorno[$i]['numero'] = $ob->numero;
                 $retorno[$i]['emissao'] = $ob->emissao;
                 $retorno[$i]['tipofavorecido'] = $ob->tipofavorecido;
-                $retorno[$i]['favorecido'] = $ob->favorecido;
-                $retorno[$i]['observacao'] = $ob->observacao;
+                $retorno[$i]['favorecidocodigo'] = $favorecido['codigo'];
+                $retorno[$i]['favorecidonome'] = $favorecido['nome'];
+                $retorno[$i]['observacao'] = $this->trataString($ob->observacao);
                 $retorno[$i]['tipoob'] = $ob->tipoob;
                 $retorno[$i]['processo'] = $ob->processo;
                 $retorno[$i]['cancelamentoob'] = $ob->cancelamentoob;
                 $retorno[$i]['numeroobcancelamento'] = $ob->numeroobcancelamento;
                 $retorno[$i]['valor'] = number_format($ob->valor, 2, ',', '.');
                 $retorno[$i]['documentoorigem'] = $ob->documentoorigem;
+                $retorno[$i]['empenhos'] = $onxne;
 
                 $i++;
             }
@@ -338,21 +304,30 @@ class OrdembancariaController extends Controller
 
         if (count($ordembancaria)) {
 
-            $i = 1;
+            $i = 0;
             foreach ($ordembancaria as $ob) {
+                $onxne = Obxne::where('ordembancaria_id', $ob->id)
+                    ->orderBy('id')
+                    ->pluck('numeroempenho')->toArray();;
+
+                $credor = new EmpenhoController();
+                $favorecido = $credor->buscaCredor($ob->favorecido, $ob->tipofavorecido);
+
                 $retorno[$i]['ug'] = $ob->ug;
                 $retorno[$i]['gestao'] = $ob->gestao;
                 $retorno[$i]['numero'] = $ob->numero;
                 $retorno[$i]['emissao'] = $ob->emissao;
                 $retorno[$i]['tipofavorecido'] = $ob->tipofavorecido;
-                $retorno[$i]['favorecido'] = $ob->favorecido;
-                $retorno[$i]['observacao'] = $ob->observacao;
+                $retorno[$i]['favorecidocodigo'] = $favorecido['codigo'];
+                $retorno[$i]['favorecidonome'] = $favorecido['nome'];
+                $retorno[$i]['observacao'] = $this->trataString($ob->observacao);
                 $retorno[$i]['tipoob'] = $ob->tipoob;
                 $retorno[$i]['processo'] = $ob->processo;
                 $retorno[$i]['cancelamentoob'] = $ob->cancelamentoob;
                 $retorno[$i]['numeroobcancelamento'] = $ob->numeroobcancelamento;
-                $retorno[$i]['valor'] = $ob->valor;
+                $retorno[$i]['valor'] = number_format($ob->valor, 2, ',', '.');
                 $retorno[$i]['documentoorigem'] = $ob->documentoorigem;
+                $retorno[$i]['empenhos'] = $onxne;
 
                 $i++;
             }
