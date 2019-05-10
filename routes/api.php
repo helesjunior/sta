@@ -20,7 +20,7 @@ use Illuminate\Http\Request;
 Route::group([
     'namespace' => 'Api',
 ], function () {
-    //busca empenhos via ajax
+    //API leitura de arquivos qware (STA)
     Route::get('/ler/empenho', 'EmpenhoController@ler');
     Route::get('/ler/empenhodetalhado', 'EmpenhodetalhadoController@ler');
     Route::get('/ler/credor', 'CredorController@ler');
@@ -28,6 +28,8 @@ Route::group([
     Route::get('/ler/planointerno', 'PlanointernoController@ler');
     Route::get('/ler/ordembancaria/', 'OrdembancariaController@ler');
     Route::get('/ler/dochabil', 'DocHabilController@ler');
+
+    //API Consulta Banco de Dados
     Route::get('/empenho/{dado}', 'EmpenhoController@buscaEmpenhoPorNumero');
     Route::get('/empenho/ano/{ano}/ug/{ug}/', 'EmpenhoController@buscaEmpenhoPorAnoUg');
     Route::get('/empenhodetalhado/{dado}', 'EmpenhodetalhadoController@buscaEmpenhodetalhadoPorNumeroEmpenho');
