@@ -228,6 +228,42 @@ class EmpenhoController extends Controller
         return json_encode($retorno);
     }
 
+    public function buscaEmpenhoPorAnoUg($ano, $ug)
+    {
+
+        $retorno = [];
+
+        $empenhos = Empenho::where('ug', $ug)
+            ->where('numero', 'LIKE', $ano . 'NE%')
+            ->get();
+
+        if (count($empenhos)) {
+
+            $i = 0;
+            foreach ($empenhos as $empenho) {
+                $credor = $this->buscaCredor($empenho->favorecido, $empenho->tipofavorecido);
+                $planointerno = $this->buscaPlanointerno($empenho->planointerno);
+
+                $retorno[$i]['ug'] = $empenho->ug;
+                $retorno[$i]['gestao'] = $empenho->gestao;
+                $retorno[$i]['numero'] = $empenho->numero;
+                $retorno[$i]['emissao'] = $empenho->emissao;
+                $retorno[$i]['tipocredor'] = $empenho->tipofavorecido;
+                $retorno[$i]['cpfcnpjugidgener']= $credor['codigo'];
+                $retorno[$i]['nome'] = $credor['nome'];
+                $retorno[$i]['observacao'] = $this->trataString($empenho->observacao);
+                $retorno[$i]['fonte'] = $empenho->fonte;
+                $retorno[$i]['naturezadespesa'] = $empenho->naturezadespesa;
+                $retorno[$i]['picodigo'] = $planointerno['codigo'];
+                $retorno[$i]['pidescricao'] = $planointerno['descricao'];
+                $i++;
+            }
+        }
+
+        return json_encode($retorno);
+    }
+
+
     public function buscaPlanointerno(string $pi)
     {
         $buscapi = Planointerno::where('codigo', $pi)
@@ -294,8 +330,6 @@ class EmpenhoController extends Controller
 
         return $credor;
     }
-
-
 
 
 }

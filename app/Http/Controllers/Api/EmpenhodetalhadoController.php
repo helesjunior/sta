@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\Empenho;
 use App\Models\Empenhodetalhado;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -38,7 +39,8 @@ class EmpenhodetalhadoController extends Controller
                     $listaempenho = $this->lerArquivo($nome);
 
                     foreach ($listaempenho as $e) {
-                        $busca = $this->buscaLista($e['ug'], $e['gestao'], $e['numeroli'], $e['numitem'], $e['subitem']);
+                        $busca = $this->buscaLista($e['ug'], $e['gestao'], $e['numeroli'], $e['numitem'],
+                            $e['subitem']);
                         if (!count($busca)) {
                             $novo_listaempenho = new Empenhodetalhado;
                             $novo_listaempenho->ug = $e['ug'];
@@ -94,12 +96,14 @@ class EmpenhodetalhadoController extends Controller
         while (!gzeof($myfile)) {
             $line = gzgets($myfile);
 
-            if (strlen($line) == 0) break;
+            if (strlen($line) == 0) {
+                break;
+            }
 
             $ref[$i]['column'] = trim(substr($line, 0, 40));
             $ref[$i]['type'] = trim(substr($line, 40, 1));
 
-            if (strstr(trim(substr($line, 42, 4)), ",") != FALSE) {
+            if (strstr(trim(substr($line, 42, 4)), ",") != false) {
                 $num = explode(",", trim(substr($line, 42, 4)));
                 $ref[$i]['size'] = $num[0] + $num[1];
                 $ref[$i]['decimal'] = $num[1];
@@ -164,4 +168,46 @@ class EmpenhodetalhadoController extends Controller
         }
         return $listaempenho;
     }
+
+    public function buscaEmpenhodetalhadoPorNumeroEmpenho($dado)
+    {
+        $ug = substr($dado, 0, 6);
+        $gestao = substr($dado, 6, 5);
+        $numempenho = strtoupper(substr($dado, 11, 12));
+        $retorno = [];
+
+        $empenho = Empenho::where('ug', $ug)
+            ->where('gestao', $gestao)
+            ->where('numero', $numempenho)
+            ->first();
+
+        if (count($empenho)) {
+
+            $empenhodetalhado = $this->buscaEmpenhoDetalhadoPorUgGestaoLi($empenho);
+
+            $i = 0;
+            foreach ($empenhodetalhado as $det) {
+                $retorno[$i]['numitem'] = $det->numitem;
+                $retorno[$i]['subitem'] = $det->subitem;
+                $retorno[$i]['quantidade'] = $det->quantidade;
+                $retorno[$i]['valorunitario'] = $det->valorunitario;
+                $retorno[$i]['valortotal'] = $det->valortotal;
+                $i++;
+            }
+
+        }
+
+        return json_encode($retorno);
+    }
+
+    public function buscaEmpenhoDetalhadoPorUgGestaoLi(Empenho $empenho)
+    {
+        $empenhodetalhado = Empenhodetalhado::where('ug', $empenho->ug)
+            ->where('gestao', $empenho->gestao)
+            ->where('numeroli', $empenho->num_lista)
+            ->get();
+
+        return $empenhodetalhado;
+    }
+
 }
