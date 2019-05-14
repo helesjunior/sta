@@ -197,7 +197,7 @@ class EmpenhodetalhadoController extends Controller
 
         }
 
-        return json_encode($retorno);
+        return $retorno;
     }
 
     public function buscaEmpenhoDetalhadoPorUgGestaoLi(Empenho $empenho)

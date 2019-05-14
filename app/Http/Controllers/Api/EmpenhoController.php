@@ -244,6 +244,9 @@ class EmpenhoController extends Controller
                 $credor = $this->buscaCredor($empenho->favorecido, $empenho->tipofavorecido);
                 $planointerno = $this->buscaPlanointerno($empenho->planointerno);
 
+                $empenhodetalhado = new EmpenhodetalhadoController;
+                $uggestaoempenho = $empenho->ug.$empenho->gestao.$empenho->numero;
+
                 $retorno[$i]['ug'] = $empenho->ug;
                 $retorno[$i]['gestao'] = $empenho->gestao;
                 $retorno[$i]['numero'] = $empenho->numero;
@@ -256,6 +259,7 @@ class EmpenhoController extends Controller
                 $retorno[$i]['naturezadespesa'] = $empenho->naturezadespesa;
                 $retorno[$i]['picodigo'] = $planointerno['codigo'];
                 $retorno[$i]['pidescricao'] = $planointerno['descricao'];
+                $retorno[$i]['itens'] = $empenhodetalhado->buscaEmpenhodetalhadoPorNumeroEmpenho($uggestaoempenho);
                 $i++;
             }
         }
