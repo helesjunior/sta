@@ -35,7 +35,7 @@ class OrdembancariaController extends Controller
 
         if (count($nomearquivo)) {
             foreach ($nomearquivo as $nome) {
-                if (substr($nome, 0, 2) == 'ob') {
+                if (substr($nome, 0, 2) == 'ob' or substr($nome, 6, 2) == 'ob') {
                     $ordembancaria = $this->lerArquivo($nome);
 
                     foreach ($ordembancaria as $e) {

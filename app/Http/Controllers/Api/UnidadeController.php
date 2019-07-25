@@ -34,7 +34,7 @@ class UnidadeController extends Controller
 
         if (count($nomearquivo)) {
             foreach ($nomearquivo as $nome) {
-                if (substr($nome, 0, 2) == 'ug') {
+                if (substr($nome, 0, 2) == 'ug' or substr($nome, 6, 2) == 'ug') {
                     $credor = $this->lerArquivo($nome);
 
                     foreach ($credor as $e) {

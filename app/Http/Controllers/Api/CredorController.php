@@ -34,7 +34,7 @@ class CredorController extends Controller
 
         if (count($nomearquivo)) {
             foreach ($nomearquivo as $nome) {
-                if (substr($nome, 0, 6) == 'credor') {
+                if (substr($nome, 0, 6) == 'credor' or substr($nome, 6, 6) == 'credor') {
                     $credor = $this->lerArquivo($nome);
 
                     foreach ($credor as $e) {

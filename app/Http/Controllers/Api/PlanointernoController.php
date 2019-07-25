@@ -33,7 +33,7 @@ class PlanointernoController extends Controller
         }
         if (count($nomearquivo)) {
             foreach ($nomearquivo as $nome) {
-                if (substr($nome, 0, 2) == 'pi') {
+                if (substr($nome, 0, 2) == 'pi' or substr($nome, 6, 2) == 'pi') {
                     $planointerno = $this->lerArquivo($nome);
 
                     foreach ($planointerno as $e) {

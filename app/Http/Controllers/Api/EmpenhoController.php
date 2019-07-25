@@ -42,7 +42,7 @@ class EmpenhoController extends Controller
 
         if (count($nomearquivo)) {
             foreach ($nomearquivo as $nome) {
-                if (substr($nome, 0, 2) == 'ne') {
+                if (substr($nome, 0, 2) == 'ne' or substr($nome, 6, 2) == 'ne') {
                     $empenho = $this->lerArquivo($nome);
 
                     foreach ($empenho as $e) {
